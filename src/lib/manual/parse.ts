@@ -1,297 +1,137 @@
-import type { ManualItem, TextFragment } from './types';
+import type { ManualItem, ManualTable, ManualTableRow } from './types';
 
-const Y_TOLERANCE = 2.5;
-const TABLE_BREAK_GAP = 28;
-const CONTINUATION_MIN_LENGTH = 25;
-const SECTION_LABEL_MAX_LENGTH = 28;
-const SENTENCE_STARTERS = new Set([
-  'A',
-  'An',
-  'Based',
-  'Combines',
-  'Controls',
-  'Creates',
-  'Delivers',
-  'Designed',
-  'Emulates',
-  'Features',
-  'Mimics',
-  'Produces',
-  'Provides',
-  'Recreates',
-  'Simulates',
-  'Switches',
-  'The',
-  'Uses',
-]);
+const FX_HEADER = 'FX Title';
+const DESCRIPTION_HEADER = 'Description';
+const MIC_HEADER = 'Mic Type';
+const MIC_NAME_HEADER = 'Name';
+const MIC_BASED_ON_HEADER = 'Based On';
+const MIC_TYPE_HEADER = 'Type';
 
-function normalizeText(text: string): string {
-  return text.replace(/\s+/g, ' ').trim().toLowerCase();
+function normalizeCell(value: string | null | undefined): string {
+  return value ? value.replace(/\s+/g, ' ').trim() : '';
 }
 
-function isNoiseLine(text: string): boolean {
-  return (
-    /^page\s*\d+$/i.test(text) ||
-    /^\d+$/i.test(text) ||
-    /^\*?the manufacturers and product names mentioned above are trademarks or registered trademarks of their respective owners\.?/i.test(text) ||
-    text.includes('trademarks were used merely to identify the sound character of the products') ||
-    text.includes('copyright') ||
-    text.includes('hotone') ||
-    text.includes('ampero mini')
-  );
+function normalizeTitle(value: string | null | undefined): string {
+  return normalizeCell(value).replace(/^\*+\s*/, '');
 }
 
-function joinTexts(texts: string[]): string {
-  return texts.join(' ').replace(/\s+/g, ' ').trim();
+function isFxTableHeader(row: ManualTableRow): boolean {
+  return normalizeCell(row[0]) === FX_HEADER && normalizeCell(row[1]) === DESCRIPTION_HEADER;
 }
 
-function splitWords(text: string): string[] {
-  return text.trim().split(/\s+/).filter(Boolean);
+function isMicTableHeader(row: ManualTableRow): boolean {
+  return normalizeCell(row[0]) === MIC_HEADER;
 }
 
-function isLikelySectionLabel(text: string): boolean {
-  const normalized = text.trim();
+function isMicColumnHeader(row: ManualTableRow): boolean {
+  return normalizeCell(row[0]) === MIC_NAME_HEADER && normalizeCell(row[1]) === MIC_BASED_ON_HEADER && normalizeCell(row[2]) === MIC_TYPE_HEADER;
+}
 
-  if (!normalized || normalized.length > SECTION_LABEL_MAX_LENGTH || /[.?!]/.test(normalized)) {
+function isIgnorableTitle(title: string): boolean {
+  return [
+    'amp',
+    'cab/ir',
+    'factory cab',
+    'fx1, fx2, fx3',
+    'mic type',
+    'modulation',
+    'parameters & range',
+    'parameters & ranges',
+    'rvb',
+  ].includes(title.toLowerCase());
+}
+
+function isLikelyVariantTitle(title: string): boolean {
+  const normalized = normalizeCell(title);
+
+  if (!normalized || normalized.length > 40 || /[.?!]/.test(normalized)) {
     return false;
   }
 
-  const words = splitWords(normalized);
-
-  if (words.length === 0 || words.length > 3) {
-    return false;
-  }
-
-  return words.every((word) => /^[A-Z0-9][A-Za-z0-9/&'*/:-]*$/.test(word));
-}
-
-function isLikelyContinuationText(text: string): boolean {
-  const normalized = text.trim();
-
-  if (!normalized || isLikelySectionLabel(normalized)) {
-    return false;
-  }
-
-  if (normalized.length >= CONTINUATION_MIN_LENGTH) {
+  if (/\d/.test(normalized)) {
     return true;
   }
 
-  const firstWord = splitWords(normalized)[0];
-
-  return SENTENCE_STARTERS.has(firstWord);
+  const suffixes = ['clean', 'norm', 'drive', 'bright', 'tb', 'jump'];
+  return suffixes.some((suffix) => normalized.toLowerCase().endsWith(` ${suffix}`));
 }
 
-function isLikelyTitlePrefix(text: string): boolean {
-  const normalized = text.trim();
+function rowToFxItem(row: ManualTableRow, fallbackDescription = ''): ManualItem | null {
+  const title = normalizeTitle(row[0]);
+  const description = normalizeCell(row[1]) || (fallbackDescription && isLikelyVariantTitle(title) ? fallbackDescription : '');
 
-  if (!normalized || normalized.length > 32 || /[.?!,;]/.test(normalized)) {
-    return false;
-  }
-
-  const words = splitWords(normalized);
-
-  if (words.length < 2 || words.length > 3) {
-    return false;
-  }
-
-  return words.every((word) => /^[A-Z0-9][A-Za-z0-9/&'*/:-]*$/.test(word));
-}
-
-function splitTitleAndDescription(text: string): { title: string; description: string } | null {
-  const words = splitWords(text);
-
-  if (words.length < 4) {
+  if (!title || !description || isIgnorableTitle(title)) {
     return null;
   }
 
-  for (const titleWordCount of [2, 3]) {
-    if (words.length <= titleWordCount) {
-      continue;
-    }
-
-    const title = words.slice(0, titleWordCount).join(' ');
-    const description = words.slice(titleWordCount).join(' ');
-
-    if (isLikelyTitlePrefix(title) && isLikelyContinuationText(description)) {
-      return { title, description };
-    }
-  }
-
-  return null;
-}
-
-type Line = {
-  page: number;
-  y: number;
-  fragments: TextFragment[];
-};
-
-type TableState = {
-  page: number | null;
-  splitX: number;
-  current: ManualItem | null;
-  lastY: number | null;
-};
-
-function groupFragmentsIntoLines(fragments: TextFragment[]): Line[] {
-  const sorted = [...fragments].sort((a, b) => {
-    if (a.page !== b.page) {
-      return a.page - b.page;
-    }
-
-    if (Math.abs(a.y - b.y) > Y_TOLERANCE) {
-      return b.y - a.y;
-    }
-
-    return a.x - b.x;
-  });
-
-  const lines: Line[] = [];
-
-  for (const fragment of sorted) {
-    const lastLine = lines[lines.length - 1];
-
-    if (
-      lastLine &&
-      lastLine.page === fragment.page &&
-      Math.abs(lastLine.y - fragment.y) <= Y_TOLERANCE
-    ) {
-      lastLine.fragments.push(fragment);
-      lastLine.y = Math.max(lastLine.y, fragment.y);
-    } else {
-      lines.push({ page: fragment.page, y: fragment.y, fragments: [fragment] });
-    }
-  }
-
-  return lines.map((line) => ({
-    ...line,
-    fragments: line.fragments.sort((a, b) => a.x - b.x),
-  }));
-}
-
-function isHeaderLine(line: Line): boolean {
-  const texts = line.fragments.map((fragment) => normalizeText(fragment.text));
-
-  return texts.includes('fx title') && texts.includes('description');
-}
-
-function getTableSplitX(line: Line): number {
-  const title = line.fragments.find((fragment) => normalizeText(fragment.text) === 'fx title');
-  const description = line.fragments.find((fragment) => normalizeText(fragment.text) === 'description');
-
-  if (!title || !description) {
-    throw new Error('Table header missing FX Title or Description column');
-  }
-
-  return (title.x + description.x) / 2;
-}
-
-function lineToCells(line: Line, splitX: number): { title: string; description: string } {
-  const titleTexts = line.fragments
-    .filter((fragment) => fragment.x < splitX)
-    .map((fragment) => fragment.text)
-    .filter(Boolean);
-  const descriptionTexts = line.fragments
-    .filter((fragment) => fragment.x >= splitX)
-    .map((fragment) => fragment.text)
-    .filter(Boolean);
-
   return {
-    title: joinTexts(titleTexts),
-    description: joinTexts(descriptionTexts),
+    title,
+    description,
   };
 }
 
-function commitCurrent(items: ManualItem[], state: TableState): void {
-  if (state.current && state.current.title && state.current.description) {
-    items.push({
-      title: state.current.title,
-      description: state.current.description,
-    });
+function rowToMicItem(row: ManualTableRow): ManualItem | null {
+  const title = normalizeTitle(row[0]);
+  const basedOn = normalizeCell(row[1]);
+  const type = normalizeCell(row[2]).replace(/^Ribbo$/, 'Ribbon');
+
+  if (!title || !basedOn || !type || title.toLowerCase() === 'name') {
+    return null;
   }
 
-  state.current = null;
+  return {
+    title,
+    description: `Based On: ${basedOn}; Type: ${type}`,
+  };
 }
 
-export function extractManualItems(fragments: TextFragment[]): ManualItem[] {
-  const lines = groupFragmentsIntoLines(fragments);
+function dedupeExact(items: ManualItem[]): ManualItem[] {
+  const seen = new Set<string>();
+
+  return items.filter((item) => {
+    const key = `${item.title}\u0000${item.description}`;
+
+    if (seen.has(key)) {
+      return false;
+    }
+
+    seen.add(key);
+    return true;
+  });
+}
+
+export function extractManualItems(tables: ManualTable[]): ManualItem[] {
   const items: ManualItem[] = [];
-  const tableState: TableState = { page: null, splitX: 0, current: null, lastY: null };
 
-  for (const line of lines) {
-    if (tableState.page !== line.page) {
-      commitCurrent(items, tableState);
-      tableState.page = line.page;
-      tableState.splitX = 0;
-      tableState.lastY = null;
-    }
-
-    if (isHeaderLine(line)) {
-      commitCurrent(items, tableState);
-      tableState.page = line.page;
-      tableState.splitX = getTableSplitX(line);
-      tableState.lastY = line.y;
+  for (const table of tables) {
+    if (!table.length) {
       continue;
     }
 
-    if (!tableState.splitX) {
-      continue;
-    }
+    if (isFxTableHeader(table[0])) {
+      let lastFxDescription = '';
 
-    if (tableState.lastY !== null && tableState.lastY - line.y > TABLE_BREAK_GAP) {
-      commitCurrent(items, tableState);
-      tableState.splitX = 0;
-      tableState.lastY = null;
-      continue;
-    }
+      for (const row of table.slice(1)) {
+        const item = rowToFxItem(row, lastFxDescription);
 
-    const normalizedLine = normalizeText(line.fragments.map((fragment) => fragment.text).join(' '));
-    if (!normalizedLine || isNoiseLine(normalizedLine)) {
-      tableState.lastY = line.y;
-      continue;
-    }
-
-    const { title, description } = lineToCells(line, tableState.splitX);
-
-    if (title) {
-      if (!description) {
-        if (tableState.current && isLikelyContinuationText(title)) {
-          tableState.current.description = joinTexts([tableState.current.description, title]);
-        } else if (!tableState.current) {
-          const split = splitTitleAndDescription(title);
-
-          if (split) {
-            tableState.current = split;
-          } else {
-            tableState.current = {
-              title,
-              description,
-            };
-          }
-        } else {
-          commitCurrent(items, tableState);
-          tableState.current = {
-            title,
-            description,
-          };
+        if (item) {
+          lastFxDescription = item.description;
+          items.push(item);
         }
-      } else {
-        commitCurrent(items, tableState);
-        tableState.current = {
-          title,
-          description,
-        };
       }
-    } else if (description && tableState.current) {
-      if (!isLikelySectionLabel(description)) {
-        tableState.current.description = joinTexts([tableState.current.description, description]);
-      }
+      continue;
     }
 
-    tableState.lastY = line.y;
+    if (isMicTableHeader(table[0]) && table.length > 2 && isMicColumnHeader(table[1])) {
+      for (const row of table.slice(2)) {
+        const item = rowToMicItem(row);
+
+        if (item) {
+          items.push(item);
+        }
+      }
+    }
   }
 
-  commitCurrent(items, tableState);
-
-  return items;
+  return dedupeExact(items);
 }

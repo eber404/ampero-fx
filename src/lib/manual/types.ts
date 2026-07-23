@@ -3,9 +3,6 @@ export type ManualItem = {
   description: string;
 };
 
-export type TextFragment = {
-  page: number;
-  text: string;
-  x: number;
-  y: number;
-};
+export type ManualTableRow = Array<string | null | undefined>;
+
+export type ManualTable = ManualTableRow[];

@@ -1,431 +1,455 @@
 [
   {
     "title": "Comprosso",
-    "description": "Compressor Output (0~100) Controls the effect output volume Threshold (0~100) Controls the compression threshold Ratio (0~100) Controls the compression ratio Output (0-100) Controls the effect output volume Attack (0~100) Controls how soon the compressor Flexible, fully adjustable starts to process the signal"
+    "description": "Based on the legendary Ross™ Compressor"
   },
   {
     "title": "Squeezer",
-    "description": "compressor effect Release (0~100) Controls how soon the compressor starts to release the signal level back to normal after the level drops below the threshold Tone (0~100) Controls the effect tone brightness Blend (0~100) Controls the wet/dry signal ratio Gain (0~100) Controls the gain amount Based on famous Xotic® AC Volume (0~100) Controls the effect output volume"
+    "description": "Flexible, fully adjustable compressor effect"
   },
   {
     "title": "Affinity Boost",
-    "description": "Booster* pedal Bass (0~100) Controls the low frequency amount Treble (0~100) Controls the high frequency amount Bass (0~100) Controls the low frequency amount Treble (0~100) Controls the high frequency amount Based on legendary green clip-on"
+    "description": "Based on famous Xotic® AC Booster* pedal"
   },
   {
     "title": "FET Boost",
-    "description": "Volume (0~100) Controls the effect output volume FET Preamp Low Cut (Off/On) Switches the low cut (-6dB/oct @200Hz) filter on/off +3dB (Off/On) Switches min. boost amount from 0dB to Based on famous Xotic® EP Booster* +3dB"
+    "description": "Based on legendary green clip-on FET Preamp"
   },
   {
     "title": "Enhancer",
-    "description": "pedal Bright (Off/On) Switches extra brightness on/off Volume (0~100) Controls the effect output volume Based on famous ISP® Decimator™*"
+    "description": "Based on famous Xotic® EP Booster* pedal"
   },
   {
     "title": "Smart Gate",
-    "description": "Threshold (0~100) Controls the noise gate threshold noise gate pedal Threshold (0~100) Controls the noise gate threshold A 2-mode noise gate with fast"
+    "description": "Based on famous ISP® Decimator™* noise gate pedal"
   },
   {
     "title": "Fast Gate",
-    "description": "Mode(I/II) Selects from two modes: response Mode I: resopnds faster Mode II: responds smoother Pure boost designed for modern Boost (0~100) Controls the boost amount Dentlemen and metalheads with"
+    "description": "A 2-mode noise gate with fast response"
   },
   {
     "title": "Gated Boost",
-    "description": "Gate (0~100) Controls the noise gate threshold built-in noise gate and low cut Low Cut (0~100) Cuts the low frequency signal function Frequency Designed for acoustic instruments,"
+    "description": "Pure boost designed for modern Dentlemen and metalheads with built-in noise gate and low cut function"
   },
   {
-    "title": "Acoustic",
-    "description": "bringing you a more natural Shape (0~100) Controls the detailed sound character"
-  },
-  {
-    "title": "Refiner",
-    "description": "\"woody\" acoustic sound"
+    "title": "Acoustic Refiner",
+    "description": "Designed for acoustic instruments, bringing you a more natural \"woody\" acoustic sound"
   },
   {
     "title": "AC Sim",
-    "description": "for guitars STANDARD: Simulates a standard acoustic guitar JUMBO: Simulates a jumbo acoustic guitar ENHANCED: Simulates an acoustic guitar with enhanced attack PIEZO: Simulates the sound of a piezo pickup Sens (0~100) Controls the sensitivity A wide ranged envelope filter (a.k.a. Range (0~100) Contols the filter center frequency range touch wah) designed for guitarists"
+    "description": "Acoustic guitar simulator designed for guitars"
   },
   {
     "title": "Toucher",
-    "description": "Q (0~100) Controls the filter Q and bassists that is touch-sensitive Mix (0~100) Controls the wet/dry signal ratio and flexible Mode (Guitar/Bass) Switches from guitar/bass modes Depth (0~100) Controls the effect depth Rate (0~100) Controls the effect speed Volume (0~100) Controls the effect output Providing a variable auto wah effect"
+    "description": "A wide ranged envelope filter (a.k.a. touch wah) designed for guitarists and bassists that is touch-sensitive and flexible"
   },
   {
     "title": "Crier",
-    "description": "Low (0~100) Controls the filter low frequency range for both guitars and basses Q (0~100) Controls the filter Q High (0~100) Controls the filter high frequency range Sync (Off/On) Switches Tap Tempo sync on/off Based on legendary VOX® V846* Range (0~100) Controls the filter frequency range"
+    "description": "Providing a variable auto wah effect for both guitars and basses"
   },
   {
     "title": "Voxy Wah",
-    "description": "wah pedal Q (0~100) Controls the filter Q Based on legendary Dunlop® Volume (0~100) Controls the effect output"
+    "description": "Based on legendary VOX® V846* wah pedal"
   },
   {
     "title": "Cry Wah",
-    "description": "CryBaby®* wah pedal To use expression pedal as a wah pedal, assign Range as control target; you’ll hear the difference by switching"
+    "description": "Based on legendary Dunlop® CryBaby®* wah pedal"
   },
   {
     "title": "Bass Press",
-    "description": "the pedal on and moving back and forth mode) Low Oct (0~100) Controls the lower octave volume"
+    "description": "Based on Hotone Bass Press (WAH mode)"
   },
   {
     "title": "Clean Octa",
-    "description": "Provides polyphonic octave effect High Oct (0~100) Controls the higher octave volume Dry (0~100) Contols the dry signal level Hi Pitch (0~+24) Controls the lower pitch by half notes Low Pitch (0~-24) Controls the higher pitch by half Polyphonic pitch shifter/harmonizer notes"
+    "description": "Provides polyphonic octave effect"
   },
   {
     "title": "Harmony",
-    "description": "Hi Volume (0~100) Controls the high pitch volume Low Volume (0~100) Controls the low pitch volume"
+    "description": "Polyphonic pitch shifter/harmonizer based on Hotone Harmony"
   },
   {
-    "title": "Telephone",
-    "description": "Noise (0~100) Controls the backgroud noise amount Simulates vintage telephone effect"
+    "title": "Telephone Line",
+    "description": "Simulates vintage telephone effect"
   },
   {
-    "title": "Line",
-    "description": "Shake (0~100) Controls the sound vibration"
+    "title": "Satisfaction",
+    "description": "Vintage tape saturation simulater providing analog warmth and natural distortion"
+  },
+  {
+    "title": "Path Filter",
+    "description": "A 4-step auto filter machine for creating synth-like sounds"
   },
   {
     "title": "Bit Krusher",
-    "description": "Bit (0~100) Controls the bit depth reducing effect with musical fashion Hi Cut (0~100) Controls the high cut amnount Lo Cut (0~100) Controls the low cut amount Mix (0~100) Contols the wet/dry signal ratio A ring modulator for creating Freq (0~100) Controls the modulation frequency"
+    "description": "Provides bitcrushing/sample reducing effect with musical fashion"
   },
   {
     "title": "Ring Mod",
-    "description": "intresting inharmonic frequency Fine (-50~0~+50) Fine tune the modulation frequency spectra (like bells and chimes) by 1Hz Tone (0~100) Controls the tone brightness This model is auto swell effect that Attack (0~100) Controls how fast the effect swells the"
+    "description": "A ring modulator for creating intresting inharmonic frequency spectra (like bells and chimes)"
   },
   {
     "title": "Sweller",
-    "description": "creating a violin-like tone. Two input signal parameters make it simple. Curve (Line/Exp/Log) Selects the volume swell curve A polyphonic pitch shifter with max. 2 octaves pitch shifting range. Pitch (-24~+24) Controls the maximum pitch shifting Tips for using expression pedals: range (fully toe position) by ±24 semitones assign the Position parameter to"
+    "description": "This model is auto swell effect that creating a violin-like tone. Two parameters make it simple."
   },
   {
     "title": "Pitch Shift",
-    "description": "Volume (0~100) Controls the effect output volume your expression pedal, turn the Position (0~100) Controls the pedal position expression pedal on, and you can Dry (0~100) Controls the dry singal level bend the pitch by moving the pedal back and forth This model is a monophonic pitch shifter with max. 2 octaves pitch shifting range, simulating the classic Range (0~100) Selects the pitch shifting range Whammy® tone. Assign the Position Position (0~100) Controls the pedal position (min=0,"
+    "description": "A polyphonic pitch shifter with max. 2 octaves pitch shifting range. Tips for using expression pedals: assign the Position parameter to your expression pedal, turn the expression pedal on, and you can bend the pitch by moving the pedal back and forth"
   },
   {
     "title": "Classic PS",
-    "description": "parameter to your expression pedal, max=100) turn the expression pedal on, and Mix (0~100) Controls the dry/wet signal ratio you can bend the pitch by moving the pedal back and forth. Overdrive/Distortion Gain (0~100) Controls the gain amount Based on legenary Ibanez® TS-808"
+    "description": "This model is a monophonic pitch shifter with max. 2 octaves pitch shifting range, simulating the classic Whammy® tone. Assign the Position parameter to your expression pedal, turn the expression pedal on, and you can bend the pitch by moving the pedal back and forth."
   },
   {
     "title": "Green Drive",
-    "description": "Tone (0~100) Controls the tone brigntness Tube Screamer®* overdrive pedal Volume (0~100) Controls the effect output volume Based on the legendary 3-knob Gain (0~100) Controls the gain amount yellow overdrive pedal, reproducing"
+    "description": "Based on legenary Ibanez® TS-808 Tube Screamer®* overdrive pedal"
   },
   {
     "title": "Super Drive",
-    "description": "Tone (0~100) Controls the tone brightness the thick, warm sound produced Volume (0~100) Controls the effect output volume by asymmetric overdrive circuitry Gain (0~100) Controls the gain amount Classic overdrive Inspired by Tone (0~100) Controls the tone brightness"
+    "description": "Based on the legendary 3-knob yellow overdrive pedal, reproducing the thick, warm sound produced by asymmetric overdrive circuitry"
   },
   {
     "title": "Screamood",
-    "description": "legendary TS-style overdrive served Volume (0~100) Controls the effect output volume with its most enduring modification Fat (Off/On) Switches extra resonance on/off Air (Off/On) Switch extra presence on/off Gain (0~100) Controls the gain amount Based on legendary Hermida® Tone (0~100) Controls the tone brightness"
+    "description": "Classic overdrive Inspired by legendary TS-style overdrive served with its most enduring modification"
   },
   {
     "title": "Zen Garden",
-    "description": "Zendrive®* overdrive pedal Volume (0~100) Controls the effect output volume Voice (0~100) Controls the upper harmonics character Based on legendary Electro- Sustain (0~100) Controls the gain amount"
+    "description": "Based on legendary Hermida® Zendrive®* overdrive pedal"
   },
   {
     "title": "Big Pie",
-    "description": "Harmonix® Big Muff Pi®* fuzz/ Tone (0~100) Controls the tone brightness distortion pedal Volume (0~100) Controls the effect output volume"
+    "description": "Based on legendary Electro- Harmonix® Big Muff Pi®* fuzz/ distortion pedal"
   },
   {
     "title": "Face Fuzz",
-    "description": "Fuzz Face®* fuzz pedal Fuzz (0~100) Controls the gain amount Based on legendary Sola Sound® Volume (0~100) Controls the effect output volume"
+    "description": "Based on legendary Dallas-Arbiter® Fuzz Face®* fuzz pedal"
   },
   {
     "title": "Bend Fuzz",
-    "description": "Tone Bender® MkII* fuzz peal Gain (0~100) Controls the gain amount Based on legendary ProCo™ The Filter (0~100) Conterclockwize controls the tone"
+    "description": "Based on legendary Sola Sound® Tone Bender® MkII* fuzz peal"
   },
   {
     "title": "Black Tail",
-    "description": "Rat* distortion (early LM308 OP- brigntness amp version) Volume (0~100) Controls the effect output volume Based on the legendary 3-knob Gain (0~100) Controls the gain amount"
+    "description": "Based on legendary ProCo™ The Rat* distortion (early LM308 OP- amp version)"
   },
   {
     "title": "Smooth Dist",
-    "description": "orange distortion released in late Tone (0~100) Controls the tone brightness 1970s Volume (0~100) Controls the effect output volume Gain (0~100) Controls the gain amount Volume (0~100) Controls the effect output volume Based on Marshall® Guv’ Nor*"
+    "description": "Based on the legendary 3-knob orange distortion released in late 1970s"
   },
   {
     "title": "Governor",
-    "description": "Bass (0~100) Controls the low frequency amount distortion pedal Middle (0~100) Controls the mid frequency amount Treble (0~100) Controls the high frequency amount Based on MI Audio® Crunch Box®* Gain (0~100) Controls the gain amount"
+    "description": "Based on Marshall® Guv’ Nor* distortion pedal"
   },
   {
     "title": "Crunchist",
-    "description": "distortion peal, providing classic Tone (0~100) Controls the tone brightness UK-style high gain stack sound Volume (0~100) Controls the effect output volume Gain (0~100) Controls the gain amount Blend (0~100) Controls the wet/dry signal ratio Based on a yellow bass overdrive"
+    "description": "Based on MI Audio® Crunch Box®* distortion peal, providing classic UK-style high gain stack sound"
   },
   {
     "title": "Bass Crusher",
-    "description": "Volume (0~100) Controls the effect output volume pedal with wide tonal range Bass (0~100) Controls the low frequency amount Treble (0~100) Controls the high frequency amount Gain (0~100) Controls the gain amount Tone (0~100) Controls the tone brightness Volume (0~100) Controls the effect output volume A bass drive with rich, solid sound Mode (Normal/Scoop/Edge) Selects from 3 different"
+    "description": "Based on a yellow bass overdrive pedal with wide tonal range"
   },
   {
     "title": "Solid Steel",
-    "description": "and flexible tonal range modes: Normal: Neutral mode /Scoop: Mid-scooped mode/ Edge: A mode with boosted highs Blend (0~100) Controls the wet/dry signal ratio Based on the widely used blues overdrive (and the famous PHAT- modified version), Dr. Blues is a roadmap of classic bluesy textures Gain (0~100) Controls the gain amount to take you from sweet Tennessee"
+    "description": "A bass drive with rich, solid sound and flexible tonal range"
   },
   {
     "title": "Dr. Blues",
-    "description": "Tone (0~100) Controls the tone brightness to screaming Texas. Turn up the Volume (0~100) Controls the effect output volume GAIN knob to get a warm distortion with tons of sensitivity and a wide frequency response. It works great on bass too!"
+    "description": "Based on the widely used blues overdrive (and the famous PHAT- modified version), Dr. Blues is a roadmap of classic bluesy textures to take you from sweet Tennessee to screaming Texas. Turn up the GAIN knob to get a warm distortion with tons of sensitivity and a wide frequency response. It works great on bass too!"
   },
   {
     "title": "Blues Butter",
-    "description": "breaker®* overdrive pedal, this Tone (0~100) Controls the tone brightness low-mid-gain overdrive will add Volume (0~100) Controls the effect output volume sweetness (and a little wildness) to your guitar sound. You can use it as a clean boost too! Gain (0~100) Controls the overdrive amount Magic T is an overdrive model based Volume (0~100) Controls the effect output on the legendary Paul Cochrane Bass/Treble (0~100) 2-band EQ that controls the effect Timmy®* overdrive (V2) pedal – one tone of the first transparent overdrive"
+    "description": "This Blues Butter overdrive model recreates the magic of the classic Blues breaker®* sound for you. Based on the Marshall® Blues breaker®* overdrive pedal, this low-mid-gain overdrive will add sweetness (and a little wildness) to your guitar sound. You can use it as a clean boost too!"
   },
   {
     "title": "Magic T",
-    "description": "(counterclockwise, same as original) pedals. Like the original, Magic T Mode (I/II/III) Selects from three clipping modes: pushes your amp/guitar to the limit -I: asymmetrical clipping while maintaining the original flavor -II: symmetrical clipping and dynamics. -III: symmetrical clipping with more compression feel Precise Attack is a modern booster/ overdrive model based on the famous Horizon Devices® Precision Drive*. Designed by Misha Mansoor, Gain: Controls the overdrive amount this pedal is an everything solution Tone: Controls the effect tone for progressive musicians. Plug in"
+    "description": "Magic T is an overdrive model based on the legendary Paul Cochrane Timmy®* overdrive (V2) pedal – one of the first transparent overdrive pedals. Like the original, Magic T pushes your amp/guitar to the limit while maintaining the original flavor and dynamics."
   },
   {
-    "title": "*Precise",
-    "description": "Volume: Controls the effect output an extended range guitar, or run"
+    "title": "Precise Attack",
+    "description": "Precise Attack is a modern booster/ overdrive model based on the famous Horizon Devices® Precision Drive*. Designed by Misha Mansoor, this pedal is an everything solution for progressive musicians. Plug in an extended range guitar, or run into a high gain amp to find the prog magic. Special designed Attack control tightens the low ends and makes your sound prog-y.A built-in smart noise gate reduces hum and keeps your palm muting tight."
   },
   {
-    "title": "Attack",
-    "description": "Attack: 6-mode selector; dial clockwise for a tighter, into a high gain amp to find the more aggressive sound prog magic. Special designed Attack Gate: Controls the built-in noise gate threshold control tightens the low ends and makes your sound prog-y.A built-in smart noise gate reduces hum and keeps your palm muting tight. Modulation Based on legendary Arion® SCH-1* Depth (0~100) Controls the chorus depth"
+    "title": "Aozora Chorus",
+    "description": "Based on legendary Arion® SCH-1* stereo chorus pedal, producing classic 1980s chorus tone that loved by Clapton and Landau"
   },
   {
-    "title": "Aozora",
-    "description": "stereo chorus pedal, producing Rate (0~100) Controls the chorus speed"
-  },
-  {
-    "title": "Chorus",
-    "description": "classic 1980s chorus tone that loved Tone (0~100) Controls the tone brightness by Clapton and Landau Sync (Off/On) Switches Tap Tempo sync on/off Based on the legendary huge Depth (0~100) Controls the chorus depth ensemble chorus pedal born in late"
-  },
-  {
-    "title": "Grand",
-    "description": "Rate (0~100) Controls the chorus speed 1970s (chorus mode), producing"
-  },
-  {
-    "title": "Choruium",
-    "description": "Volume (0~100) Controls the output volume rich, shimmering vintage analog Sync (Off/On) Switches Tap Tempo sync on/off chorus tone Based on a legendary 4-button purple stereo chorus pedal,"
+    "title": "Grand Choruium",
+    "description": "Based on the legendary huge ensemble chorus pedal born in late 1970s (chorus mode), producing rich, shimmering vintage analog chorus tone"
   },
   {
     "title": "Liquid C",
-    "description": "Mode (1/2/3/4) Selects from 4 sound characters providing detailed rich chorus tone that expands sonic dimensions Depth (0~100) Controls the chorus depth Based on the famous ensemble Rate (0~100) Controls the chrous speed"
+    "description": "Based on a legendary 4-button purple stereo chorus pedal, providing detailed rich chorus tone that expands sonic dimensions"
   },
   {
     "title": "Choruium B",
-    "description": "chorus unit tuned for bassists E.Level (0~100) Controls the effect output volume Sync (Off/On) Switches Tap Tempo sync on/off"
+    "description": "Based on the famous ensemble chorus unit tuned for bassists"
   },
   {
     "title": "Detune",
-    "description": "signal with original sound, Wet (0~100) Controls the effect output volume producing chorus-like tone Dry (0~100) Controls the dry signal level Classsic flanging effect that is rich"
+    "description": "Combines a slightly pitch shifted signal with original sound, producing chorus-like tone"
   },
   {
     "title": "Jetter",
-    "description": "Depth (0~100) Controls the flanger depth and natural Rate (0~100) Controls the effect speed Classic flanging effect tuned for"
+    "description": "Classsic flanging effect that is rich and natural"
   },
   {
     "title": "Jetter B",
-    "description": "Pre Delay (0~100) Controls the pre delay time basses Feedback (0~100) Controls the feedback amount A flanger with negative feedback, Sync (Off/On) Switches Tap Tempo sync on/off"
+    "description": "Classic flanging effect tuned for basses"
   },
   {
     "title": "Jetter N",
-    "description": "producing \"underwater\" style sound Flg Depth (0~100) Controls the flanger depth Flg Rate (0~100) Controls the flanging speed Feedback (0~100) Controls the feedback amount Trm Depth (0~100) Controls the tremolo depth Combines flanger and tremolo in"
+    "description": "A flanger with negative feedback, producing \"underwater\" style sound"
   },
   {
     "title": "Trem Jet",
-    "description": "Trm Rate (0~100) Controls the tremolo speed one Flg Sync (Off/On) Switches flanger Tap Tempo sync on/ off Trm Sync (Off/On) Switches tremolo Tap Tempo sync on/off Based on a BBD-based blue vibrato Depth (0~100) Controls the vibraro depth"
+    "description": "Combines flanger and tremolo in one"
   },
   {
     "title": "Pulser",
-    "description": "pedal, producing natural analog Rate (0~100) Controls the vibrato speed vibrato sound Sync (Off/On) Switches Tap Tempo sync on/off Based on the legendary huge Depth (0~100) Controls the vibrato depth ensemble chorus pedal born in late Rate (0~100) Controls the vibrato speed"
+    "description": "Based on a BBD-based blue vibrato pedal, producing natural analog vibrato sound"
   },
   {
     "title": "Grand Vibrato",
-    "description": "1970s (vibrato mode), producing E.Level (0~100) Controls the output volume rich, shimmering vintage analog Sync (Off/On) Switches Tap Tempo sync on/off vibrato tone Sens (0~100) Counterclockwise controls the effect sensitivity A special vibrato with touch-"
+    "description": "Based on the legendary huge ensemble chorus pedal born in late 1970s (vibrato mode), producing rich, shimmering vintage analog vibrato tone"
   },
   {
     "title": "Shiver T",
-    "description": "Rate (0~100) Controls the effect speed sensitive dynamic depth control Output (0~100) Controls the output volume Sync (Off/On) Switches Tap Tempo sync on/off Based on legendary MXR® M101 Rate (0~100) Controls the phaser speed"
+    "description": "A special vibrato with touch- sensitive dynamic depth control"
   },
   {
     "title": "90 Phaser",
-    "description": "Phase 90* Sync (Off/On) Switches Tap Tempo sync on/off Depth (0~100) Contols the phaser depth Based on a legendary 2-knob green"
+    "description": "Based on legendary MXR® M101 Phase 90*"
   },
   {
     "title": "Green Phaser",
-    "description": "Rate (0~100) Controls the phaser speed phaser with sharp sound character Sync (Off/On) Switches Tap Tempo sync on/off Depth (0~100) Controls the effect depth Rate (0~100) Controls the effect speed Based on legendary Shin-ei® Uni- Volume (0~100) Controls the output volume"
+    "description": "Based on a legendary 2-knob green phaser with sharp sound character"
   },
   {
     "title": "Revolver",
-    "description": "Vibe®* Mode (Chorus/Vibrato) Selects from two sound characters: Chorus/Vibrato Sync (Off/On) Switches Tap Tempo sync on/off Based on legendary Demeter® TRM- Depth (0~100) Controls the tremolo depth"
+    "description": "Based on legendary Shin-ei® Uni- Vibe®*"
   },
   {
     "title": "Helicopter",
-    "description": "1 Tremulator*, offering classical Rate (0~100) Controls the tremolo speed opto tremolo sound Sync (Off/On) Switches Tap Tempo sync on/off"
+    "description": "Based on legendary Demeter® TRM- 1 Tremulator*, offering classical opto tremolo sound"
   },
   {
     "title": "Custom Trem",
-    "description": "waveforms and super wide tonal Shape (Sine/Triangle/Square/Sawtooth) Selects from range sine/triangle/square/sawtooth tremolo waveforms Bias (0~100) Controls the waveform offset amount Sync (Off/On) Switches Tap Tempo sync on/off AMP Clean Volume (0~100) Controls the amp pre gain Based on Fender® Tweed Deluxe*"
+    "description": "A custom tremolo with 4 different waveforms and super wide tonal range"
   },
   {
     "title": "Tweed Lux",
-    "description": "Tone (0~100) Controls the tone brightness (bright channel, 5E3 version) Output (0~100) Controls the amp output volume Volume (0~100) Controls the amp pre gain Presence (0~100) Controls the amp presence Output (0~100) Controls the amp output volume"
+    "description": "Based on Fender® Tweed Deluxe* (bright channel, 5E3 version)"
   },
   {
-    "title": "Baseman",
-    "description": "Based on Fender® ’59 Bassman®* Bass (0~100) Controls the amp low frequency response"
-  },
-  {
-    "title": "Norm",
-    "description": "(normal channel) Middle (0~100) Controls the amp mid frequency response Treble (0~100) Controls the amp high frequency response Gain (0~100) Controls the amp pre gain Master (0~100) Controls the amp output volume Bass (0~100) Controls the amp low frequency response Middle (0~100) Controls the amp mid frequency"
+    "title": "Baseman Norm",
+    "description": "Based on Fender® ’59 Bassman®* (normal channel)"
   },
   {
     "title": "Black Twin",
-    "description": "Based on Fender® ’65 Twin Reverb®* response Treble (0~100) Controls the amp high frequency response Bright (Off/On) Switches extra brightness on/off Volume (0~100) Controls the amp pre gain Tone Cut (0~100) Counterclockwise controls the tone"
+    "description": "Based on Fender® ’65 Twin Reverb®*"
   },
   {
-    "title": "Voxy 30HW",
-    "description": "Based on VOX® AC30HW* (normal brightness"
-  },
-  {
-    "title": "Norm",
-    "description": "channel) Master (0~100) Controls the amp output volume Bright (Off/On) Switches extra brightness on/off Volume (0~100) Controls the amp output volume Bright (0~100) Switches extra brightness on/off Bass (0~100) Controls the amp low frequency response Based on the legendary “Jazz"
+    "title": "Voxy 30HW Norm",
+    "description": "Based on VOX® AC30HW* (normal channel)"
   },
   {
     "title": "Jazz Clean",
-    "description": "Middle (0~100) Controls the amp mid frequency Chorus” solid state combo response Treble (0~100) Controls the amp high frequency response"
+    "description": "Based on the legendary “Jazz Chorus” solid state combo"
   },
   {
-    "title": "Emperor",
-    "description": "Based Matchless™ Chieftain 212 Gain (0~100) Controls the amp pre gain"
+    "title": "Emperor Clean",
+    "description": "Based Matchless™ Chieftain 212 combo* (clean tone)"
   },
   {
-    "title": "Clean",
-    "description": "combo* (clean tone) Presence (0~100) Controls the amp presence Master (0~100) Controls the amp output volume Bass (0~100) Controls the amp low frequency response"
-  },
-  {
-    "title": "Superstar",
-    "description": "Based on Mesa/Boogie® Lone Middle (0~100) Controls the amp mid frequency"
-  },
-  {
-    "title": "Clean",
-    "description": "Star™ (CH1) response Treble (0~100) Controls the amp high frequency response Gain (0~100) Controls the amp pre gain Presence (0~100) Controls the amp presence Master (0~100) Controls the amp output volume Based on Bogner ® Shiva* (20th"
+    "title": "Superstar Clean",
+    "description": "Based on Mesa/Boogie® Lone Star™ (CH1)"
   },
   {
     "title": "Glacian Clean",
-    "description": "Bass (0~100) Controls the amp low frequency response Anniversary version, Ch1) Treble (0~100) Controls the amp high frequency response Bright (Off/On) Switches extra brightness on/off The Tweed Prince is an amp simulator based on one of the legendary studio combo amps: Volume (0~100) Controls the effect output and gain Fender® Tweed Princeton Amp* amount"
+    "description": "Based on Bogner ® Shiva* (20th Anniversary version, Ch1)"
   },
   {
     "title": "Tweed Prince",
-    "description": "(5F2-A version), another \"huge tone Tone (0~100) Controls the effect tone in a small box\" masterpiece which Output (0~100) Controls the effect output remains popular among players, builders and collectors. A Tone knob makes it more versatile. The Black Prince is an amp Volume (0~100) Controls the effect output and gain simulator based on the Fender® amount Blackface Princeton®* amp (AA964"
+    "description": "The Tweed Prince is an amp simulator based on one of the legendary studio combo amps: Fender® Tweed Princeton Amp* (5F2-A version), another \"huge tone in a small box\" masterpiece which remains popular among players, builders and collectors. A Tone knob makes it more versatile."
   },
   {
     "title": "Black Prince",
-    "description": "Output (0~100) Controls the effect output version). Push it to the verge of Bass/Treble (0~100) 2-band EQ that controls the effect breakup you'll find the fantastic tone tone beloved by lots of musicians. Match 30 Clean is based on the Volume: Controls the effect output and gain amount unbeatable Matchless\" DC- Tone cut: Counterclockwise controls the"
+    "description": "The Black Prince is an amp simulator based on the Fender® Blackface Princeton®* amp (AA964 version). Push it to the verge of breakup you'll find the fantastic tone beloved by lots of musicians."
   },
   {
-    "title": "*Match 30",
-    "description": "30 combo* - one of the earliest effect tone"
+    "title": "Match 30 Clean",
+    "description": "Match 30 Clean is based on the unbeatable Matchless\" DC- 30 combo* - one of the earliest boutique amps, which takes the legendary UK-style Class A sound to a new level."
   },
   {
-    "title": "Clean",
-    "description": "boutique amps, which takes the Master: Controls the effect output (post gain) legendary UK-style Class A sound to Bass/Treble: 2-band EQ that controls the a new level. effect tone Drive Volume (0~100) Controls the amp pre gain Presence (0~100) Controls the amp presence Output (0~100) Controls the amp output volume"
+    "title": "Baseman Bright",
+    "description": "Based on Fender® ’59 Bassman®* (bright channel)"
   },
   {
-    "title": "Baseman",
-    "description": "Based on Fender® ’59 Bassman®* Bass (0~100) Controls the amp low frequency response"
+    "title": "Voxy 30HW TB",
+    "description": "Based on VOX® AC30HW* (Top Boost channel)"
   },
   {
-    "title": "Bright",
-    "description": "(bright channel) Middle (0~100) Controls the amp mid frequency response Treble (0~100) Controls the amp high frequency response"
+    "title": "Emperor Drive",
+    "description": "Based on Matchless™ Chieftain 212 combo* (dirty tone)"
   },
   {
-    "title": "Voxy 30HW",
-    "description": "Based on VOX® AC30HW* (Top Master (0~100) Controls the amp output volume"
-  },
-  {
-    "title": "TB",
-    "description": "Boost channel) Bass (0~100) Controls the amp low frequency response Treble (0~100) Controls the amp high frequency response Char (Cool/Hot) Selects from 2 gain ranges Gain (0~100) Controls the amp pre gain Presence (0~100) Controls the amp presence Master (0~100) Controls the amp output volume"
-  },
-  {
-    "title": "Emperor",
-    "description": "Based on Matchless™ Chieftain 212 Bass (0~100) Controls the amp low frequency response"
-  },
-  {
-    "title": "Drive",
-    "description": "combo* (dirty tone) Middle (0~100) Controls the amp mid frequency response Treble (0~100) Controls the amp high frequency response Gain (0~100) Controls the amp pre gain Drive (0~100) Controls the amp drive amount Master (0~100) Controls the amp output volume"
-  },
-  {
-    "title": "Superstar",
-    "description": "Based on Mesa/Boogie® Lone Bass (0~100) Controls the amp low frequency response"
-  },
-  {
-    "title": "Drive",
-    "description": "Star™ (CH2) Middle (0~100) Controls the amp mid frequency response Treble (0~100) Controls the amp high frequency response Based on Marshall® JTM45* (normal Volume (0~100) Controls the amp pre gain"
+    "title": "Superstar Drive",
+    "description": "Based on Mesa/Boogie® Lone Star™ (CH2)"
   },
   {
     "title": "Marshell 45",
-    "description": "channel) Presence (0~100) Controls the amp presence Output (0~100) Controls the amp output volume Bass (0~100) Controls the amp low frequency response Based on Marshall® JTM45* (High Middle (0~100) Controls the amp mid frequency"
+    "description": "Based on Marshall® JTM45* (normal channel)"
   },
   {
     "title": "Marshell 45+",
-    "description": "Treble channel) response Treble (0~100) Controls the amp high frequency response Gain (0~100) Controls the amp pre gain Presence (0~100) Controls the amp presence Output (0~100) Controls the amp output volume"
+    "description": "Based on Marshall® JTM45* (High Treble channel)"
   },
   {
-    "title": "Marshell 45",
-    "description": "Based on Marshall®JTM45* (\"Jump\" Bass (0~100) Controls the amp low frequency response"
-  },
-  {
-    "title": "Jump",
-    "description": "connection) Middle (0~100) Controls the amp mid frequency response Treble (0~100) Controls the amp high frequency response"
+    "title": "Marshell 45 Jump",
+    "description": "Based on Marshall®JTM45* (\"Jump\" connection)"
   },
   {
     "title": "Marshell 50",
-    "description": "channel) Presence (0~100) Controls the amp presence Master (0~100) Controls the amp output volume Bass (0~100) Controls the amp low frequency response Based on Marshall® JMP50* (High Middle (0~100) Controls the amp mid frequency"
+    "description": "Based on Marshall® JMP50* (normal channel)"
   },
   {
     "title": "Marshell 50+",
-    "description": "Treble channel) response Treble (0~100) Controls the amp high frequency response Gain (0~100) Controls the amp pre gain Presence (0~100) Controls the amp presence Output (0~100) Controls the amp output volume"
+    "description": "Based on Marshall® JMP50* (High Treble channel)"
   },
   {
-    "title": "Marshell 50",
-    "description": "Based on Marshall® JMP50* (\"Jump\" Bass (0~100) Controls the amp low frequency response"
+    "title": "Marshell 50 Jump",
+    "description": "Based on Marshall® JMP50* (\"Jump\" connection)"
   },
   {
-    "title": "Jump",
-    "description": "connection) Middle (0~100) Controls the amp mid frequency response Treble (0~100) Controls the amp high frequency response"
+    "title": "Hot Kitty Drive",
+    "description": "Based on Bad Cat® Hot Cat 30* (drive channel)"
   },
   {
-    "title": "Hot Kitty",
-    "description": "Based on Bad Cat® Hot Cat 30*"
+    "title": "Messe IIC+ 1",
+    "description": "Based on Mesa/Boogie® Mark II C+™ (Lead channel) with 3 different onboard switch combinations"
   },
   {
-    "title": "Drive",
-    "description": "(drive channel)"
+    "title": "Messe IIC+ 2",
+    "description": "Based on Mesa/Boogie® Mark II C+™ (Lead channel) with 3 different onboard switch combinations"
+  },
+  {
+    "title": "Messe IIC+ 3",
+    "description": "Based on Mesa/Boogie® Mark II C+™ (Lead channel) with 3 different onboard switch combinations"
+  },
+  {
+    "title": "Soloist 100 Crunch",
+    "description": "Based on Soldano® SLO100* (normal channel, dirty sound)"
+  },
+  {
+    "title": "Marshell 800",
+    "description": "Based on Marshall® JCM800*"
+  },
+  {
+    "title": "Fryman B1",
+    "description": "Based on the famous“Brown Eye”UK-style boutique amp head (BE channel) with 2 different onboard switch combinations"
+  },
+  {
+    "title": "Fryman B2",
+    "description": "Based on the famous“Brown Eye”UK-style boutique amp head (BE channel) with 2 different onboard switch combinations"
+  },
+  {
+    "title": "Glacian Drive",
+    "description": "Based on Bogner® Shiva* (20th Anniversary version, Ch2)"
   },
   {
     "title": "Marshell 900",
-    "description": "(Model 4100, channel B) Based on Diezel® VH4* (CH3, blue"
+    "description": "Based on Marshall® JCM900* (Model 4100, channel B)"
   },
   {
     "title": "Dizzle VH B",
-    "description": "version) Based on Diezel® VH4* (CH3, silver"
+    "description": "Based on Diezel® VH4* (CH3, blue version)"
   },
   {
     "title": "Dizzle VH S",
-    "description": "version) Based on ENGL® Savage 120 E610*"
+    "description": "Based on Diezel® VH4* (CH3, silver version)"
   },
   {
     "title": "Engle Saga 1",
-    "description": "(CH4, contour off) Based on ENGL® Savage 120 E610* Gain (0~100) Controls the amp pre gain"
+    "description": "Based on ENGL® Savage 120 E610* (CH4, contour off)"
   },
   {
     "title": "Engle Saga 2",
-    "description": "(CH4, contour on) Presence (0~100) Controls the amp presence"
+    "description": "Based on ENGL® Savage 120 E610* (CH4, contour on)"
   },
   {
     "title": "Fryman HB",
-    "description": "Based on the famous“Brown Master (0~100) Controls the amp output volume Eye”UK-style boutique amp head Bass (0~100) Controls the amp low frequency response"
-  },
-  {
-    "title": "Fryman HB+",
-    "description": "(HBE channel) with 2 different Middle (0~100) Controls the amp mid frequency onboard switch combinations response Based on Peavey® 5150® (LEAD Treble (0~100) Controls the amp high frequency"
+    "description": "Based on the famous“Brown Eye”UK-style boutique amp head (HBE channel) with 2 different onboard switch combinations"
   },
   {
     "title": "Eddie 51",
-    "description": "channel) response"
+    "description": "Based on Peavey® 5150® (LEAD channel)"
   },
   {
-    "title": "Smart Gate",
-    "description": "Threshold (0~100) Controls the noise gate threshold noise gate pedal Threshold (0~100) Controls the noise gate threshold A 2-mode noise gate with fast"
+    "title": "Soloist 100 Lead",
+    "description": "Based on Soldano® SLO100* (overdrive channel)"
   },
   {
-    "title": "Fast Gate",
-    "description": "Mode(I/II) Selects from two modes: response Mode I: resopnds faster Mode II: responds smoother"
+    "title": "Messe IV Lead 1",
+    "description": "Based on Mesa/Boogie® Mark IV™ (Lead channel) with 3 different onboard switch combinations"
   },
   {
-    "title": "Position X/Y/Z:",
-    "description": "Controls the mic mosition simulations; X/Y controls the microphone horizontal/vertical position, set X=Y=0 to set the microphone on axis; Z controls the distance between microphone and speaker cap"
+    "title": "Messe IV Lead 2",
+    "description": "Based on Mesa/Boogie® Mark IV™ (Lead channel) with 3 different onboard switch combinations"
+  },
+  {
+    "title": "Messe IV Lead 3",
+    "description": "Based on Mesa/Boogie® Mark IV™ (Lead channel) with 3 different onboard switch combinations"
+  },
+  {
+    "title": "Tangerine R100",
+    "description": "Based on Orange® Rockerverb 100™* (Dirty channel)"
+  },
+  {
+    "title": "Rector Dual V",
+    "description": "Based on Mesa/Boogie® Dual Rectifier® (CH3, vintage mode)"
+  },
+  {
+    "title": "Rector Dual M",
+    "description": "Based on Mesa/Boogie® Dual Rectifier® (CH3, modern mode)"
+  },
+  {
+    "title": "Dizzle VH+ B",
+    "description": "Based on Diezel® VH4* (CH4, blue version)"
+  },
+  {
+    "title": "Dizzle VH+ S",
+    "description": "Based on Diezel® VH4* (CH4, silver version)"
+  },
+  {
+    "title": "Boger XT Red M",
+    "description": "Based on Bogner® Ecstasy* (\"Red\" channel, Modern mode)"
+  },
+  {
+    "title": "Alchemy Pre",
+    "description": "Based on Alembic™ F-2B* preamp"
+  },
+  {
+    "title": "Ampage Classic",
+    "description": "Based on Ampeg® SVT* bass amp"
+  },
+  {
+    "title": "Ampage Flip",
+    "description": "Based on Ampeg® B-15* \"Flip Top” bass amp"
+  },
+  {
+    "title": "Voxy Bass",
+    "description": "Based on vintage VOX®* AC-100* bass amp"
+  },
+  {
+    "title": "Messe Bass 400",
+    "description": "Based on Mesa/Boogie® Bass 400* amp"
+  },
+  {
+    "title": "Acoustic Preamp 1",
+    "description": "Based on AER® Colourizer 2* acoustic preamp with 2 different onboard switch combinations"
+  },
+  {
+    "title": "Acoustic Preamp 2",
+    "description": "Based on AER® Colourizer 2* acoustic preamp with 2 different onboard switch combinations"
   },
   {
     "title": "Super Zep 1x6",
@@ -526,6 +550,18 @@
   {
     "title": "UK Modern 4x12",
     "description": "Custom modified Marshall®* 4x12\" cabinet"
+  },
+  {
+    "title": "UK Green 4x12",
+    "description": "Vintage Marshall® 4x12\" cabinet with Celestion® Greenback®* speakers"
+  },
+  {
+    "title": "Eddie 4x12",
+    "description": "Peavey® 6505* 4x12\" cabinet"
+  },
+  {
+    "title": "Rector 4x12",
+    "description": "Mesa/Boogie® Rectifier®* 4x12\" cabinet"
   },
   {
     "title": "Boger 4x12",
@@ -657,43 +693,87 @@
   },
   {
     "title": "User IR 1-10",
-    "description": "an empty User IR slot"
+    "description": "For loading 3rd party IR files; the output will be muted when switched to an empty User IR slot"
+  },
+  {
+    "title": "OFF",
+    "description": "Based On: N/A; Type: N/A"
+  },
+  {
+    "title": "Dyn 57",
+    "description": "Based On: Shure® SM57*; Type: Dynamic"
+  },
+  {
+    "title": "Dyn 58",
+    "description": "Based On: Shure® SM58*; Type: Dynamic"
+  },
+  {
+    "title": "Dyn 421",
+    "description": "Based On: Sennheiser® MD421*; Type: Dynamic"
+  },
+  {
+    "title": "Dyn 16",
+    "description": "Based On: Electro-Voice RE16*; Type: Dynamic"
+  },
+  {
+    "title": "Dyn 112",
+    "description": "Based On: AKG® D112*; Type: Dynamic"
+  },
+  {
+    "title": "Dyn 609",
+    "description": "Based On: Sennheiser® e609*; Type: Dynamic"
+  },
+  {
+    "title": "Con U67",
+    "description": "Based On: Neumann® U67*; Type: Condenser"
+  },
+  {
+    "title": "Con 87A",
+    "description": "Based On: Shure® Beta 87A*; Type: Condenser"
+  },
+  {
+    "title": "Con U87",
+    "description": "Based On: Neumann® U87*; Type: Condenser"
+  },
+  {
+    "title": "Rib 121",
+    "description": "Based On: Royal® R121*; Type: Ribbon"
   },
   {
     "title": "Guitar EQ 1",
-    "description": "1.6kHz (-50~+50) Boosts/cuts the frequency band 4kHz (-50~+50) Boosts/cuts the frequency band Volume (0~100) Controls the output volume Equalizer designed for guitars 100Hz (-50~+50) Boosts/cuts the frequency band 500Hz (-50~+50) Boosts/cuts the frequency band 1kHz (-50~+50) Boosts/cuts the frequency band"
+    "description": "Equalizer designed for guitars"
   },
   {
     "title": "Guitar EQ 2",
-    "description": "3kHz (-50~+50) Boosts/cuts the frequency band 6kHz (-50~+50) Boosts/cuts the frequency band Volume(0~100) Controls the output volume 50Hz (-50~+50) Boosts/cuts the frequency band 120Hz (-50~+50) Boosts/cuts the frequency band 400Hz (-50~+50) Boosts/cuts the frequency band"
+    "description": "Equalizer designed for guitars"
   },
   {
     "title": "Bass EQ 1",
-    "description": "800Hz (-50~+50) Boosts/cuts the frequency band 4.5kHz (-50~+50) Boosts/cuts the frequency band Volume (0~100) Controls the output volume Equalizer designed for basses 125Hz (-50~+50) Boosts/cuts the frequency band 400Hz (-50~+50) Boosts/cuts the frequency band 800Hz (-50~+50) Boosts/cuts the frequency band"
+    "description": "Equalizer designed for basses"
   },
   {
     "title": "Bass EQ 2",
-    "description": "1.6kHz (-50~+50) Boosts/cuts the frequency band 4kHz (-50~+50) Boosts/cuts the frequency band Volume (0~100) Controls the output volume"
+    "description": "Equalizer designed for basses"
   },
   {
     "title": "Para EQ",
-    "description": "high shelving filters suitable for any Q 3 (0.1-10) Controls the band 3 Q bandwidth instrument Gain 3 (-12dB~+12dB) Boosts/cuts band 3 by ±12dB Band 4 (5.0kHz-16.0kHz) Controls the band 4 center frequency Q 4 (0.1-10) Controls the band 4 Q bandwidth Gain 4 (-12dB~+12dB) Boosts/cuts band 4 by ±12dB Lo Shelf Controls the low shelf filter boost/cut range by ±12dB Hi Shelf Controls the high shelf filter boost/cut range by ±12dB Volume Controls the output volume 31Hz (-12dB~+12dB) Boosts/cuts the frequency band 63Hz (-12dB~+12dB) Boosts/cuts the frequency band 125Hz (-12dB~+12dB) Boosts/cuts the frequency band 250Hz (-12dB~+12dB) Boosts/cuts the frequency band 500Hz (-12dB~+12dB) Boosts/cuts the frequency 10-band graphic EQ suitable for any"
+    "description": "4-band parametric EQ with low/ high shelving filters suitable for any instrument"
   },
   {
     "title": "Graphic EQ",
-    "description": "band instrument 1kHz (-12dB~+12dB) Boosts/cuts the frequency band 2kHz (-12dB~+12dB) Boosts/cuts the frequency band 4kHz (-12dB~+12dB) Boosts/cuts the frequency band 8kHz (-12dB~+12dB) Boosts/cuts the frequency band 16kHz (-12dB~+12dB) Boosts/cuts the frequency band Volume (0~100) Controls the output volume 80Hz (-50~+50) Boosts/cuts the frequency band 240Hz (-50~+50) Boosts/cuts the frequency band Based on the 5-band EQ module on"
+    "description": "10-band graphic EQ suitable for any instrument"
   },
   {
     "title": "V-EQ",
-    "description": "750Hz (-50~+50) Boosts/cuts the frequency band Mesa/Boogie®* amps 2.2kHz (-50~+50) Boosts/cuts the frequency band 6.6Hz (-50~+50) Boosts/cuts the frequency band DLY Based on the legendary 3-knob BBD Mix (0~100) Contols the wet/dry signal ratio"
+    "description": "Based on the 5-band EQ module on Mesa/Boogie®* amps"
   },
   {
     "title": "Sweetie",
-    "description": "analog delay pedal with \"REPEAT Feedback (0~100) Controls the feedback amount RATE\" control Time (20ms-4000ms) Controls the delay time Based on legendary Electro-"
+    "description": "Based on the legendary 3-knob BBD analog delay pedal with \"REPEAT RATE\" control"
   },
   {
     "title": "Recaller",
-    "description": "Sync (Off/On) Switches Tap Tempo sync on/off Harmonix® Deluxe Memory Man®* Trail (Off/On) Switches effect trail on/off"
+    "description": "Based on legendary Electro- Harmonix® Deluxe Memory Man®*"
   },
   {
     "title": "Pure Eko",
@@ -701,46 +781,106 @@
   },
   {
     "title": "Analog Eko",
-    "description": "analog feel Feedback (0~100) Controls the feedback amount"
+    "description": "Producing warm delay sound with analog feel"
   },
   {
     "title": "Mag Eko",
-    "description": "Simulates solid-state tape echo sound Time (20ms-4000ms) Controls the delay time"
+    "description": "Simulates solid-state tape echo sound"
   },
   {
     "title": "Tube Eko",
-    "description": "Simulates tube-driven tape echo sound Trail (Off/On) Switches effect trail on/off"
+    "description": "Simulates tube-driven tape echo sound"
+  },
+  {
+    "title": "Backmask",
+    "description": "Producing a special delay effect with reversed feedback"
+  },
+  {
+    "title": "Ping Pong",
+    "description": "A ping-pong delay producing stereo feedbadk bounces back and forth between left and right channels"
+  },
+  {
+    "title": "Multi Head",
+    "description": "A multi tap delay that simulates a huge 4-head tape echo machine"
+  },
+  {
+    "title": "Slapback",
+    "description": "Simulates the classic slapback echo effect"
+  },
+  {
+    "title": "Vintage Rack",
+    "description": "Reproduces the sound of a vintage 1980's rack-mount delay machine with slightly sample-reduced feedback"
+  },
+  {
+    "title": "Sweep Eko",
+    "description": "Producing a delay effect with sweeping filter modulated repeats"
   },
   {
     "title": "Trem Eko",
-    "description": "altered repeats Trem Sync (Off/On) Switches tremolo Tap Tempo sync on/off Time Sync (Off/On) Switches delay Tap Tempo sync on/off Trail (Off/On) Switches effect trail on/off Mix (0~100) Contols the wet/dry signal ratio Feedback (0~100) Controls the feedback amount Time (20ms-4000ms) Controls the delay time Producing a delay effect with lo-fi'd"
+    "description": "Producing a delay effect with tremolo altered repeats"
   },
   {
     "title": "Lofi Eko",
-    "description": "Bit (0~100) Controls the effect bit depth repeats Krush (0~100) Controls the effect downsampling rate Sync (Off/On) Switches Tap Tempo sync on/off Trail (Off/On) Switches effect trail on/off Dly Mix (0~100) Contols the delay wet/dry signal ratio Feedback (0~100) Controls the feedback amount Time (20ms-4000ms) Controls the delay time Ring Mix (0~100) Contols the modulation wet/dry Producing a delay effect with ring"
+    "description": "Producing a delay effect with lo-fi'd repeats"
   },
   {
     "title": "Ring Eko",
-    "description": "signal ratio modulated repeats Freq (0~100) Controls the ring modulation frequency Tone (0~100) Controls the ring modulation tone Sync (Off/On) Switches Tap Tempo sync on/off Trail (Off/On) Switches effect trail on/off Dly Mix (0~100) Contols the delay wet/dry signal ratio Feedback (0~100) Controls the feedback amount Time (20ms-4000ms) Controls the delay time Rvb Mix (0~100) Contols the reverb wet/dry signal"
+    "description": "Producing a delay effect with ring modulated repeats"
   },
   {
     "title": "Ekoverb",
-    "description": "Combines delay and reverb in one ratio Hi Cut (0~100) Controls the reverb high cut amount Decay (0~100) Controls the reverb decay time Sync (Off/On) Switches Tap Tempo sync on/off Trail (Off/On) Switches effect trail on/off"
+    "description": "Combines delay and reverb in one"
   },
   {
     "title": "2290 Mod",
-    "description": "rack mount effect unit, which is widely Phase Reverse (None, Left, Right, Both) Switches used among countless musicians and delay phase reversing on/off on each channel studio producers. You can use Tap Low Cut (Off, 100Hz, 200Hz, 400Hz) /High Cut (33kHz, Tempo function to control the delay 8kHz, 4kHz, 2kHz) Cuts delay low/high signal at time by turning on the Sync switch. selected frequency points When the Sync switch is on, turn the Level (0-100) Controls the effect output Time knob to set a proper tap divide Sync (Off/On) Switches Tap Tempo sync on/off value. The default value is 1/4 (no Trail (Off/On) Switched effect trail on/off when the division). effect is bypassed"
+    "description": "Note: This effect features stereo I/O configuration. This model is based on the delay sound of the legendary TC Electronic®2290 Dynamic Digital Delay + Effects Controls Processor* rack mount effect unit, which is widely used among countless musicians and studio producers. You can use Tap Tempo function to control the delay time by turning on the Sync switch. When the Sync switch is on, turn the Time knob to set a proper tap divide value. The default value is 1/4 (no division)."
+  },
+  {
+    "title": "Room",
+    "description": "Simulates the spaciousness of a room"
+  },
+  {
+    "title": "Hall",
+    "description": "Simulates the spaciousness of a performance hall"
+  },
+  {
+    "title": "Church",
+    "description": "Simulates the spaciousness of a church"
+  },
+  {
+    "title": "Plate",
+    "description": "Simulates the sound character produced by a vintage plate reverberator"
+  },
+  {
+    "title": "Spring",
+    "description": "Simulates the sound character produced by a vintage spring reverberator"
+  },
+  {
+    "title": "Izumi",
+    "description": "Special-tuned reverb effect with liquid-like decays and deep low ends"
+  },
+  {
+    "title": "Northstar",
+    "description": "Special-tuned reverb effect with lush, bright decays"
+  },
+  {
+    "title": "Oceandeep",
+    "description": "Special-tuned reverb effect with huge, deep decays"
+  },
+  {
+    "title": "Sweet Space",
+    "description": "Produces a modulated reverb effect that is lush and sweet"
   },
   {
     "title": "Shimmer",
-    "description": "effect amount Hi End (-50~+50) Controls the effect high frequency amount Trail (Off/On) Switches effect trail on/off Mix (0-100) Controls the wet/dry signal ratio Pre Delay (0-100) Controls the amount of time between the dry signal and the audible onset of early Note: This effect features stereo I/O reflections and the reverb tail configuration. Decay (0-100) Controls the duration of reverb time"
+    "description": "Produce a rich, shimmering reverb effect"
   },
   {
     "title": "Cloud",
-    "description": "This reverb model creates a huge, Low Damp/Hi Damp (0-100) Dampens the effect low/ thick reverb effect like curly clouds in high frequency amount the sky. Mod (0-100) Controls the effect modulation amount Trail (Off/On) Switched effect trail on/off when the effect is bypassed"
+    "description": "Note: This effect features stereo I/O configuration. This reverb model creates a huge, thick reverb effect like curly clouds in the sky."
   },
   {
-    "title": "Sound Clone",
-    "description": "Gain: Controls the gain amount This is for loading Sound Clone file by Volume: Controls the effect output 1-10 clicking \"Sound Clone Manage\" button. Bass/Middle/Treble: 3-band EQ that controls the effect tone"
+    "title": "Sound Clone 1-10",
+    "description": "This is for loading Sound Clone file by clicking \"Sound Clone Manage\" button."
   }
 ]

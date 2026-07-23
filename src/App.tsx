@@ -92,42 +92,46 @@ export default function App() {
             </div>
 
             <div className="w-full max-w-md">
-              <label className="block text-xs font-medium uppercase tracking-[0.2em] text-zinc-500">
+              <label
+                htmlFor="catalog-search"
+                className="block text-xs font-medium uppercase tracking-[0.2em] text-zinc-500"
+              >
                 Search
-                <div className="mt-2 flex items-center gap-2 rounded-2xl border border-zinc-800 bg-zinc-900/90 px-4 py-3 shadow-inner shadow-black/20 transition focus-within:border-zinc-600 focus-within:ring-1 focus-within:ring-zinc-600">
-                  <svg
-                    aria-hidden="true"
-                    viewBox="0 0 20 20"
-                    fill="none"
-                    className="h-5 w-5 shrink-0 text-zinc-500"
-                  >
-                    <path
-                      d="M8.5 14a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11Zm3.85-1.65L17 17"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                  <input
-                    className="w-full bg-transparent text-sm text-zinc-100 outline-none placeholder:text-zinc-600 disabled:cursor-not-allowed"
-                    aria-label="Search models by title or description"
-                    placeholder="Search title or description"
-                    value={query}
-                    onChange={(event) => setQuery(event.target.value)}
-                    disabled={isLoading}
-                  />
-                  {query ? (
-                    <button
-                      type="button"
-                      className="rounded-full px-2 py-1 text-xs font-medium text-zinc-400 transition hover:bg-zinc-800 hover:text-zinc-100"
-                      onClick={() => setQuery('')}
-                    >
-                      Clear
-                    </button>
-                  ) : null}
-                </div>
               </label>
+              <div className="mt-2 flex items-center gap-2 rounded-2xl border border-zinc-800 bg-zinc-900/90 px-4 py-3 shadow-inner shadow-black/20 transition focus-within:border-zinc-600 focus-within:ring-1 focus-within:ring-zinc-600">
+                <svg
+                  aria-hidden="true"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  className="h-5 w-5 shrink-0 text-zinc-500"
+                >
+                  <path
+                    d="M8.5 14a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11Zm3.85-1.65L17 17"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+                <input
+                  id="catalog-search"
+                  className="w-full bg-transparent text-sm text-zinc-100 outline-none placeholder:text-zinc-600 disabled:cursor-not-allowed"
+                  aria-label="Search models by title or description"
+                  placeholder="Search title or description"
+                  value={query}
+                  onChange={(event) => setQuery(event.target.value)}
+                  disabled={isLoading}
+                />
+                {query ? (
+                  <button
+                    type="button"
+                    className="rounded-full px-2 py-1 text-xs font-medium text-zinc-400 transition hover:bg-zinc-800 hover:text-zinc-100"
+                    onClick={() => setQuery('')}
+                  >
+                    Clear
+                  </button>
+                ) : null}
+              </div>
             </div>
           </div>
 
