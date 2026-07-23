@@ -2,6 +2,28 @@ import type { ManualItem, TextFragment } from './types';
 
 const Y_TOLERANCE = 2.5;
 const TABLE_BREAK_GAP = 28;
+const CONTINUATION_MIN_LENGTH = 25;
+const SECTION_LABEL_MAX_LENGTH = 28;
+const SENTENCE_STARTERS = new Set([
+  'A',
+  'An',
+  'Based',
+  'Combines',
+  'Controls',
+  'Creates',
+  'Delivers',
+  'Designed',
+  'Emulates',
+  'Features',
+  'Mimics',
+  'Produces',
+  'Provides',
+  'Recreates',
+  'Simulates',
+  'Switches',
+  'The',
+  'Uses',
+]);
 
 function normalizeText(text: string): string {
   return text.replace(/\s+/g, ' ').trim().toLowerCase();
@@ -21,6 +43,81 @@ function isNoiseLine(text: string): boolean {
 
 function joinTexts(texts: string[]): string {
   return texts.join(' ').replace(/\s+/g, ' ').trim();
+}
+
+function splitWords(text: string): string[] {
+  return text.trim().split(/\s+/).filter(Boolean);
+}
+
+function isLikelySectionLabel(text: string): boolean {
+  const normalized = text.trim();
+
+  if (!normalized || normalized.length > SECTION_LABEL_MAX_LENGTH || /[.?!]/.test(normalized)) {
+    return false;
+  }
+
+  const words = splitWords(normalized);
+
+  if (words.length === 0 || words.length > 3) {
+    return false;
+  }
+
+  return words.every((word) => /^[A-Z0-9][A-Za-z0-9/&'*/:-]*$/.test(word));
+}
+
+function isLikelyContinuationText(text: string): boolean {
+  const normalized = text.trim();
+
+  if (!normalized || isLikelySectionLabel(normalized)) {
+    return false;
+  }
+
+  if (normalized.length >= CONTINUATION_MIN_LENGTH) {
+    return true;
+  }
+
+  const firstWord = splitWords(normalized)[0];
+
+  return SENTENCE_STARTERS.has(firstWord);
+}
+
+function isLikelyTitlePrefix(text: string): boolean {
+  const normalized = text.trim();
+
+  if (!normalized || normalized.length > 32 || /[.?!,;]/.test(normalized)) {
+    return false;
+  }
+
+  const words = splitWords(normalized);
+
+  if (words.length < 2 || words.length > 3) {
+    return false;
+  }
+
+  return words.every((word) => /^[A-Z0-9][A-Za-z0-9/&'*/:-]*$/.test(word));
+}
+
+function splitTitleAndDescription(text: string): { title: string; description: string } | null {
+  const words = splitWords(text);
+
+  if (words.length < 4) {
+    return null;
+  }
+
+  for (const titleWordCount of [2, 3]) {
+    if (words.length <= titleWordCount) {
+      continue;
+    }
+
+    const title = words.slice(0, titleWordCount).join(' ');
+    const description = words.slice(titleWordCount).join(' ');
+
+    if (isLikelyTitlePrefix(title) && isLikelyContinuationText(description)) {
+      return { title, description };
+    }
+  }
+
+  return null;
 }
 
 type Line = {
@@ -157,13 +254,38 @@ export function extractManualItems(fragments: TextFragment[]): ManualItem[] {
     const { title, description } = lineToCells(line, tableState.splitX);
 
     if (title) {
-      commitCurrent(items, tableState);
-      tableState.current = {
-        title,
-        description,
-      };
+      if (!description) {
+        if (tableState.current && isLikelyContinuationText(title)) {
+          tableState.current.description = joinTexts([tableState.current.description, title]);
+        } else if (!tableState.current) {
+          const split = splitTitleAndDescription(title);
+
+          if (split) {
+            tableState.current = split;
+          } else {
+            tableState.current = {
+              title,
+              description,
+            };
+          }
+        } else {
+          commitCurrent(items, tableState);
+          tableState.current = {
+            title,
+            description,
+          };
+        }
+      } else {
+        commitCurrent(items, tableState);
+        tableState.current = {
+          title,
+          description,
+        };
+      }
     } else if (description && tableState.current) {
-      tableState.current.description = joinTexts([tableState.current.description, description]);
+      if (!isLikelySectionLabel(description)) {
+        tableState.current.description = joinTexts([tableState.current.description, description]);
+      }
     }
 
     tableState.lastY = line.y;

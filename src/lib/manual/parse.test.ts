@@ -15,6 +15,52 @@ describe('extractManualItems', () => {
     ]);
   });
 
+  it('ignores centered section labels between items', () => {
+    const fragments = [
+      { page: 1, text: 'FX Title', x: 80, y: 700 },
+      { page: 1, text: 'Description', x: 260, y: 700 },
+      { page: 1, text: 'Face Fuzz', x: 80, y: 680 },
+      { page: 1, text: 'Based on legendary Dallas-Arbiter Fuzz Face fuzz pedal', x: 260, y: 680 },
+      { page: 1, text: 'Factory Cab', x: 260, y: 660 },
+      { page: 1, text: 'Voxy 2x12', x: 80, y: 640 },
+      { page: 1, text: 'Vintage VOX AC30 2x12 cabinet', x: 260, y: 640 },
+    ];
+
+    expect(extractManualItems(fragments)).toEqual([
+      { title: 'Face Fuzz', description: 'Based on legendary Dallas-Arbiter Fuzz Face fuzz pedal' },
+      { title: 'Voxy 2x12', description: 'Vintage VOX AC30 2x12 cabinet' },
+    ]);
+  });
+
+  it('splits a sentence-like title line into a short title and description', () => {
+    const fragments = [
+      { page: 2, text: 'FX Title', x: 80, y: 700 },
+      { page: 2, text: 'Description', x: 260, y: 700 },
+      { page: 2, text: 'Mag Eko Simulates solid-state tape echo sound', x: 80, y: 680 },
+    ];
+
+    expect(extractManualItems(fragments)).toEqual([
+      { title: 'Mag Eko', description: 'Simulates solid-state tape echo sound' },
+    ]);
+  });
+
+  it('appends left-column continuation text to the current description', () => {
+    const fragments = [
+      { page: 3, text: 'FX Title', x: 80, y: 700 },
+      { page: 3, text: 'Description', x: 260, y: 700 },
+      { page: 3, text: 'Pure Eko', x: 80, y: 680 },
+      { page: 3, text: 'Produce pure, precised delay sound', x: 260, y: 680 },
+      { page: 3, text: 'Simulates solid-state tape echo sound', x: 80, y: 668 },
+    ];
+
+    expect(extractManualItems(fragments)).toEqual([
+      {
+        title: 'Pure Eko',
+        description: 'Produce pure, precised delay sound Simulates solid-state tape echo sound',
+      },
+    ]);
+  });
+
   it('keeps cab and ir entries when they appear in the same table format', () => {
     const fragments = [
       { page: 3, text: 'FX Title', x: 80, y: 700 },

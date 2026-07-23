@@ -424,12 +424,8 @@
     "description": "Mode(I/II) Selects from two modes: response Mode I: resopnds faster Mode II: responds smoother"
   },
   {
-    "title": "Position X/Y/Z: Controls the mic mosition simulations; X/Y controls the microphone horizontal/vertical",
-    "description": "position,"
-  },
-  {
-    "title": "set X=Y=0 to set the microphone on axis; Z controls the distance between microphone and speaker cap",
-    "description": "Factory Cab"
+    "title": "Position X/Y/Z:",
+    "description": "Controls the mic mosition simulations; X/Y controls the microphone horizontal/vertical position, set X=Y=0 to set the microphone on axis; Z controls the distance between microphone and speaker cap"
   },
   {
     "title": "Super Zep 1x6",
@@ -617,7 +613,7 @@
   },
   {
     "title": "Ampage 8x10",
-    "description": "Ampeg SVT-810E* 8x10\" bass cabinet Factory Acoustic IR"
+    "description": "Ampeg SVT-810E* 8x10\" bass cabinet"
   },
   {
     "title": "Dreadnought 1",
@@ -657,7 +653,7 @@
   },
   {
     "title": "Double Bass",
-    "description": "Simulates a double bass User IR"
+    "description": "Simulates a double bass"
   },
   {
     "title": "User IR 1-10",
@@ -708,12 +704,12 @@
     "description": "analog feel Feedback (0~100) Controls the feedback amount"
   },
   {
-    "title": "Mag Eko Simulates solid-state tape echo sound",
-    "description": "Time (20ms-4000ms) Controls the delay time Simulates tube-driven tape echo Sync (Off/On) Switches Tap Tempo sync on/off"
+    "title": "Mag Eko",
+    "description": "Simulates solid-state tape echo sound Time (20ms-4000ms) Controls the delay time"
   },
   {
     "title": "Tube Eko",
-    "description": "sound Trail (Off/On) Switches effect trail on/off"
+    "description": "Simulates tube-driven tape echo sound Trail (Off/On) Switches effect trail on/off"
   },
   {
     "title": "Trem Eko",
@@ -732,12 +728,8 @@
     "description": "Combines delay and reverb in one ratio Hi Cut (0~100) Controls the reverb high cut amount Decay (0~100) Controls the reverb decay time Sync (Off/On) Switches Tap Tempo sync on/off Trail (Off/On) Switches effect trail on/off"
   },
   {
-    "title": "rack mount effect unit, which is widely",
-    "description": "Phase Reverse (None, Left, Right, Both) Switches"
-  },
-  {
     "title": "2290 Mod",
-    "description": "used among countless musicians and delay phase reversing on/off on each channel studio producers. You can use Tap Low Cut (Off, 100Hz, 200Hz, 400Hz) /High Cut (33kHz, Tempo function to control the delay 8kHz, 4kHz, 2kHz) Cuts delay low/high signal at time by turning on the Sync switch. selected frequency points When the Sync switch is on, turn the Level (0-100) Controls the effect output Time knob to set a proper tap divide Sync (Off/On) Switches Tap Tempo sync on/off value. The default value is 1/4 (no Trail (Off/On) Switched effect trail on/off when the division). effect is bypassed"
+    "description": "rack mount effect unit, which is widely Phase Reverse (None, Left, Right, Both) Switches used among countless musicians and delay phase reversing on/off on each channel studio producers. You can use Tap Low Cut (Off, 100Hz, 200Hz, 400Hz) /High Cut (33kHz, Tempo function to control the delay 8kHz, 4kHz, 2kHz) Cuts delay low/high signal at time by turning on the Sync switch. selected frequency points When the Sync switch is on, turn the Level (0-100) Controls the effect output Time knob to set a proper tap divide Sync (Off/On) Switches Tap Tempo sync on/off value. The default value is 1/4 (no Trail (Off/On) Switched effect trail on/off when the division). effect is bypassed"
   },
   {
     "title": "Shimmer",
@@ -745,14 +737,10 @@
   },
   {
     "title": "Cloud",
-    "description": "This reverb model creates a huge, Low Damp/Hi Damp (0-100) Dampens the effect low/ thick reverb effect like curly clouds in high frequency amount the sky. Mod (0-100) Controls the effect modulation amount Trail (Off/On) Switched effect trail on/off when the effect is bypassed Sound Clone Gain: Controls the gain amount"
+    "description": "This reverb model creates a huge, Low Damp/Hi Damp (0-100) Dampens the effect low/ thick reverb effect like curly clouds in high frequency amount the sky. Mod (0-100) Controls the effect modulation amount Trail (Off/On) Switched effect trail on/off when the effect is bypassed"
   },
   {
-    "title": "*Sound Clone",
-    "description": "This is for loading Sound Clone file by Volume: Controls the effect output"
-  },
-  {
-    "title": "1-10 clicking \"Sound Clone Manage\" button.",
-    "description": "Bass/Middle/Treble: 3-band EQ that controls the effect tone"
+    "title": "Sound Clone",
+    "description": "Gain: Controls the gain amount This is for loading Sound Clone file by Volume: Controls the effect output 1-10 clicking \"Sound Clone Manage\" button. Bass/Middle/Treble: 3-band EQ that controls the effect tone"
   }
 ]
