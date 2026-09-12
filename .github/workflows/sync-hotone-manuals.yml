@@ -1,0 +1,54 @@
+name: Sync Hotone manuals
+
+on:
+  schedule:
+    - cron: '0 7 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: hotone-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: npm ci
+      - run: python -m pip install -r requirements.txt
+      - run: npm run sync:hotone
+      - run: npm test
+      - run: npm run build
+      - name: Create or update catalog PR
+        id: create-pr
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          base: master
+          branch: hotone/manual-sync
+          delete-branch: true
+          commit-message: 'feat: refresh hotone manuals'
+          title: 'Refresh Hotone manuals'
+          body: |
+            Automated refresh from official Hotone manual and effect-list PDFs.
+
+            Validation completed in the synchronization workflow:
+            - `npm test`
+            - `npm run build`
+      - name: Auto-merge catalog update
+        if: steps.create-pr.outputs.pull-request-number != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ steps.create-pr.outputs.pull-request-number }}
+        run: gh pr merge "$PR_NUMBER" --repo "${{ github.repository }}" --squash --delete-branch

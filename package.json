@@ -29,6 +29,7 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "test:e2e": "playwright test",
-    "extract": "tsx scripts/extract-manual.ts"
+    "extract": "tsx scripts/extract-manual.ts",
+    "sync:hotone": "tsx scripts/sync-hotone-manuals.ts"
   }
 }

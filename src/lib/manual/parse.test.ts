@@ -60,6 +60,29 @@ describe('extractManualItems', () => {
     expect(extractManualItems(tables)).toEqual([]);
   });
 
+  it('extracts row-based effect tables without headers', () => {
+    const tables = [[
+      ['Direct Touch', 'Based on Barber® Direct Drive* overdrive with flat and natural response', 'Gain (0~100) Controls the gain amount'],
+      ['Big Pie', 'Based on legendary Electro-Harmonix® Big Muff Pi®* fuzz/distortion pedal', 'Sustain (0~100) Controls the gain amount'],
+      ['Face Fuzz', 'Based on legendary Dallas-Arbiter® Fuzz Face®* fuzz pedal', 'Fuzz (0~100) Controls the gain amount'],
+    ]];
+
+    expect(extractManualItems(tables)).toEqual([
+      {
+        title: 'Direct Touch',
+        description: 'Based on Barber® Direct Drive* overdrive with flat and natural response',
+      },
+      {
+        title: 'Big Pie',
+        description: 'Based on legendary Electro-Harmonix® Big Muff Pi®* fuzz/distortion pedal',
+      },
+      {
+        title: 'Face Fuzz',
+        description: 'Based on legendary Dallas-Arbiter® Fuzz Face®* fuzz pedal',
+      },
+    ]);
+  });
+
   it('extracts microphone tables into manual items', () => {
     const tables = [[
       ['Mic Type', null, null],

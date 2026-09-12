@@ -1,886 +1,1246 @@
 [
   {
     "title": "Comprosso",
-    "description": "Based on the legendary Ross™ Compressor"
+    "description": "Based on the legendary Ross™ Compressor",
+    "category": "dynamics",
+    "subtype": "compressor"
   },
   {
     "title": "Squeezer",
-    "description": "Flexible, fully adjustable compressor effect"
+    "description": "Flexible, fully adjustable compressor effect",
+    "category": "dynamics",
+    "subtype": "compressor"
   },
   {
     "title": "Affinity Boost",
-    "description": "Based on famous Xotic® AC Booster* pedal"
+    "description": "Based on famous Xotic® AC Booster* pedal",
+    "category": "drives",
+    "subtype": "boost"
   },
   {
     "title": "FET Boost",
-    "description": "Based on legendary green clip-on FET Preamp"
+    "description": "Based on legendary green clip-on FET Preamp",
+    "category": "drives",
+    "subtype": "boost"
   },
   {
     "title": "Enhancer",
-    "description": "Based on famous Xotic® EP Booster* pedal"
+    "description": "Based on famous Xotic® EP Booster* pedal",
+    "category": "utility"
   },
   {
     "title": "Smart Gate",
-    "description": "Based on famous ISP® Decimator™* noise gate pedal"
+    "description": "Based on famous ISP® Decimator™* noise gate pedal",
+    "category": "dynamics",
+    "subtype": "gate"
   },
   {
     "title": "Fast Gate",
-    "description": "A 2-mode noise gate with fast response"
+    "description": "A 2-mode noise gate with fast response",
+    "category": "dynamics",
+    "subtype": "gate"
   },
   {
     "title": "Gated Boost",
-    "description": "Pure boost designed for modern Dentlemen and metalheads with built-in noise gate and low cut function"
+    "description": "Pure boost designed for modern Dentlemen and metalheads with built-in noise gate and low cut function",
+    "category": "drives",
+    "subtype": "boost"
   },
   {
     "title": "Acoustic Refiner",
-    "description": "Designed for acoustic instruments, bringing you a more natural \"woody\" acoustic sound"
+    "description": "Designed for acoustic instruments, bringing you a more natural \"woody\" acoustic sound",
+    "category": "acoustic"
   },
   {
     "title": "AC Sim",
-    "description": "Acoustic guitar simulator designed for guitars"
+    "description": "Acoustic guitar simulator designed for guitars",
+    "category": "acoustic"
   },
   {
     "title": "Toucher",
-    "description": "A wide ranged envelope filter (a.k.a. touch wah) designed for guitarists and bassists that is touch-sensitive and flexible"
+    "description": "A wide ranged envelope filter (a.k.a. touch wah) designed for guitarists and bassists that is touch-sensitive and flexible",
+    "category": "filters"
   },
   {
     "title": "Crier",
-    "description": "Providing a variable auto wah effect for both guitars and basses"
+    "description": "Providing a variable auto wah effect for both guitars and basses",
+    "category": "filters"
   },
   {
     "title": "Voxy Wah",
-    "description": "Based on legendary VOX® V846* wah pedal"
+    "description": "Based on legendary VOX® V846* wah pedal",
+    "category": "filters"
   },
   {
     "title": "Cry Wah",
-    "description": "Based on legendary Dunlop® CryBaby®* wah pedal"
+    "description": "Based on legendary Dunlop® CryBaby®* wah pedal",
+    "category": "filters"
   },
   {
     "title": "Bass Press",
-    "description": "Based on Hotone Bass Press (WAH mode)"
+    "description": "Based on Hotone Bass Press (WAH mode)",
+    "category": "filters"
   },
   {
     "title": "Clean Octa",
-    "description": "Provides polyphonic octave effect"
+    "description": "Provides polyphonic octave effect",
+    "category": "pitch"
   },
   {
     "title": "Harmony",
-    "description": "Polyphonic pitch shifter/harmonizer based on Hotone Harmony"
+    "description": "Polyphonic pitch shifter/harmonizer based on Hotone Harmony",
+    "category": "pitch"
   },
   {
     "title": "Telephone Line",
-    "description": "Simulates vintage telephone effect"
+    "description": "Simulates vintage telephone effect",
+    "category": "utility"
   },
   {
     "title": "Satisfaction",
-    "description": "Vintage tape saturation simulater providing analog warmth and natural distortion"
+    "description": "Vintage tape saturation simulater providing analog warmth and natural distortion",
+    "category": "drives",
+    "subtype": "distortion"
   },
   {
     "title": "Path Filter",
-    "description": "A 4-step auto filter machine for creating synth-like sounds"
+    "description": "A 4-step auto filter machine for creating synth-like sounds",
+    "category": "filters"
   },
   {
     "title": "Bit Krusher",
-    "description": "Provides bitcrushing/sample reducing effect with musical fashion"
+    "description": "Provides bitcrushing/sample reducing effect with musical fashion",
+    "category": "amps"
   },
   {
     "title": "Ring Mod",
-    "description": "A ring modulator for creating intresting inharmonic frequency spectra (like bells and chimes)"
+    "description": "A ring modulator for creating intresting inharmonic frequency spectra (like bells and chimes)",
+    "category": "pitch"
   },
   {
     "title": "Sweller",
-    "description": "This model is auto swell effect that creating a violin-like tone. Two parameters make it simple."
+    "description": "This model is auto swell effect that creating a violin-like tone. Two parameters make it simple.",
+    "category": "utility"
   },
   {
     "title": "Pitch Shift",
-    "description": "A polyphonic pitch shifter with max. 2 octaves pitch shifting range. Tips for using expression pedals: assign the Position parameter to your expression pedal, turn the expression pedal on, and you can bend the pitch by moving the pedal back and forth"
+    "description": "A polyphonic pitch shifter with max. 2 octaves pitch shifting range. Tips for using expression pedals: assign the Position parameter to your expression pedal, turn the expression pedal on, and you can bend the pitch by moving the pedal back and forth",
+    "category": "pitch"
   },
   {
     "title": "Classic PS",
-    "description": "This model is a monophonic pitch shifter with max. 2 octaves pitch shifting range, simulating the classic Whammy® tone. Assign the Position parameter to your expression pedal, turn the expression pedal on, and you can bend the pitch by moving the pedal back and forth."
+    "description": "This model is a monophonic pitch shifter with max. 2 octaves pitch shifting range, simulating the classic Whammy® tone. Assign the Position parameter to your expression pedal, turn the expression pedal on, and you can bend the pitch by moving the pedal back and forth.",
+    "category": "pitch"
   },
   {
     "title": "Green Drive",
-    "description": "Based on legenary Ibanez® TS-808 Tube Screamer®* overdrive pedal"
+    "description": "Based on legenary Ibanez® TS-808 Tube Screamer®* overdrive pedal",
+    "category": "drives",
+    "subtype": "overdrive"
   },
   {
     "title": "Super Drive",
-    "description": "Based on the legendary 3-knob yellow overdrive pedal, reproducing the thick, warm sound produced by asymmetric overdrive circuitry"
+    "description": "Based on the legendary 3-knob yellow overdrive pedal, reproducing the thick, warm sound produced by asymmetric overdrive circuitry",
+    "category": "drives",
+    "subtype": "overdrive"
   },
   {
     "title": "Screamood",
-    "description": "Classic overdrive Inspired by legendary TS-style overdrive served with its most enduring modification"
+    "description": "Classic overdrive Inspired by legendary TS-style overdrive served with its most enduring modification",
+    "category": "drives",
+    "subtype": "overdrive"
   },
   {
     "title": "Zen Garden",
-    "description": "Based on legendary Hermida® Zendrive®* overdrive pedal"
+    "description": "Based on legendary Hermida® Zendrive®* overdrive pedal",
+    "category": "drives",
+    "subtype": "overdrive"
   },
   {
     "title": "Big Pie",
-    "description": "Based on legendary Electro- Harmonix® Big Muff Pi®* fuzz/ distortion pedal"
+    "description": "Based on legendary Electro- Harmonix® Big Muff Pi®* fuzz/ distortion pedal",
+    "category": "drives",
+    "subtype": "fuzz"
   },
   {
     "title": "Face Fuzz",
-    "description": "Based on legendary Dallas-Arbiter® Fuzz Face®* fuzz pedal"
+    "description": "Based on legendary Dallas-Arbiter® Fuzz Face®* fuzz pedal",
+    "category": "drives",
+    "subtype": "fuzz"
   },
   {
     "title": "Bend Fuzz",
-    "description": "Based on legendary Sola Sound® Tone Bender® MkII* fuzz peal"
+    "description": "Based on legendary Sola Sound® Tone Bender® MkII* fuzz peal",
+    "category": "drives",
+    "subtype": "fuzz"
   },
   {
     "title": "Black Tail",
-    "description": "Based on legendary ProCo™ The Rat* distortion (early LM308 OP- amp version)"
+    "description": "Based on legendary ProCo™ The Rat* distortion (early LM308 OP- amp version)",
+    "category": "drives",
+    "subtype": "distortion"
   },
   {
     "title": "Smooth Dist",
-    "description": "Based on the legendary 3-knob orange distortion released in late 1970s"
+    "description": "Based on the legendary 3-knob orange distortion released in late 1970s",
+    "category": "drives",
+    "subtype": "distortion"
   },
   {
     "title": "Governor",
-    "description": "Based on Marshall® Guv’ Nor* distortion pedal"
+    "description": "Based on Marshall® Guv’ Nor* distortion pedal",
+    "category": "drives",
+    "subtype": "distortion"
   },
   {
     "title": "Crunchist",
-    "description": "Based on MI Audio® Crunch Box®* distortion peal, providing classic UK-style high gain stack sound"
+    "description": "Based on MI Audio® Crunch Box®* distortion peal, providing classic UK-style high gain stack sound",
+    "category": "drives",
+    "subtype": "distortion"
   },
   {
     "title": "Bass Crusher",
-    "description": "Based on a yellow bass overdrive pedal with wide tonal range"
+    "description": "Based on a yellow bass overdrive pedal with wide tonal range",
+    "category": "drives",
+    "subtype": "overdrive"
   },
   {
     "title": "Solid Steel",
-    "description": "A bass drive with rich, solid sound and flexible tonal range"
+    "description": "A bass drive with rich, solid sound and flexible tonal range",
+    "category": "drives",
+    "subtype": "boost"
   },
   {
     "title": "Dr. Blues",
-    "description": "Based on the widely used blues overdrive (and the famous PHAT- modified version), Dr. Blues is a roadmap of classic bluesy textures to take you from sweet Tennessee to screaming Texas. Turn up the GAIN knob to get a warm distortion with tons of sensitivity and a wide frequency response. It works great on bass too!"
+    "description": "Based on the widely used blues overdrive (and the famous PHAT- modified version), Dr. Blues is a roadmap of classic bluesy textures to take you from sweet Tennessee to screaming Texas. Turn up the GAIN knob to get a warm distortion with tons of sensitivity and a wide frequency response. It works great on bass too!",
+    "category": "drives",
+    "subtype": "distortion"
   },
   {
     "title": "Blues Butter",
-    "description": "This Blues Butter overdrive model recreates the magic of the classic Blues breaker®* sound for you. Based on the Marshall® Blues breaker®* overdrive pedal, this low-mid-gain overdrive will add sweetness (and a little wildness) to your guitar sound. You can use it as a clean boost too!"
+    "description": "This Blues Butter overdrive model recreates the magic of the classic Blues breaker®* sound for you. Based on the Marshall® Blues breaker®* overdrive pedal, this low-mid-gain overdrive will add sweetness (and a little wildness) to your guitar sound. You can use it as a clean boost too!",
+    "category": "drives",
+    "subtype": "overdrive"
   },
   {
     "title": "Magic T",
-    "description": "Magic T is an overdrive model based on the legendary Paul Cochrane Timmy®* overdrive (V2) pedal – one of the first transparent overdrive pedals. Like the original, Magic T pushes your amp/guitar to the limit while maintaining the original flavor and dynamics."
+    "description": "Magic T is an overdrive model based on the legendary Paul Cochrane Timmy®* overdrive (V2) pedal – one of the first transparent overdrive pedals. Like the original, Magic T pushes your amp/guitar to the limit while maintaining the original flavor and dynamics.",
+    "category": "drives",
+    "subtype": "overdrive"
   },
   {
     "title": "Precise Attack",
-    "description": "Precise Attack is a modern booster/ overdrive model based on the famous Horizon Devices® Precision Drive*. Designed by Misha Mansoor, this pedal is an everything solution for progressive musicians. Plug in an extended range guitar, or run into a high gain amp to find the prog magic. Special designed Attack control tightens the low ends and makes your sound prog-y.A built-in smart noise gate reduces hum and keeps your palm muting tight."
+    "description": "Precise Attack is a modern booster/ overdrive model based on the famous Horizon Devices® Precision Drive*. Designed by Misha Mansoor, this pedal is an everything solution for progressive musicians. Plug in an extended range guitar, or run into a high gain amp to find the prog magic. Special designed Attack control tightens the low ends and makes your sound prog-y.A built-in smart noise gate reduces hum and keeps your palm muting tight.",
+    "category": "drives",
+    "subtype": "overdrive"
   },
   {
     "title": "Aozora Chorus",
-    "description": "Based on legendary Arion® SCH-1* stereo chorus pedal, producing classic 1980s chorus tone that loved by Clapton and Landau"
+    "description": "Based on legendary Arion® SCH-1* stereo chorus pedal, producing classic 1980s chorus tone that loved by Clapton and Landau",
+    "category": "modulation"
   },
   {
     "title": "Grand Choruium",
-    "description": "Based on the legendary huge ensemble chorus pedal born in late 1970s (chorus mode), producing rich, shimmering vintage analog chorus tone"
+    "description": "Based on the legendary huge ensemble chorus pedal born in late 1970s (chorus mode), producing rich, shimmering vintage analog chorus tone",
+    "category": "modulation"
   },
   {
     "title": "Liquid C",
-    "description": "Based on a legendary 4-button purple stereo chorus pedal, providing detailed rich chorus tone that expands sonic dimensions"
+    "description": "Based on a legendary 4-button purple stereo chorus pedal, providing detailed rich chorus tone that expands sonic dimensions",
+    "category": "modulation"
   },
   {
     "title": "Choruium B",
-    "description": "Based on the famous ensemble chorus unit tuned for bassists"
+    "description": "Based on the famous ensemble chorus unit tuned for bassists",
+    "category": "modulation"
   },
   {
     "title": "Detune",
-    "description": "Combines a slightly pitch shifted signal with original sound, producing chorus-like tone"
+    "description": "Combines a slightly pitch shifted signal with original sound, producing chorus-like tone",
+    "category": "modulation"
   },
   {
     "title": "Jetter",
-    "description": "Classsic flanging effect that is rich and natural"
+    "description": "Classsic flanging effect that is rich and natural",
+    "category": "utility"
   },
   {
     "title": "Jetter B",
-    "description": "Classic flanging effect tuned for basses"
+    "description": "Classic flanging effect tuned for basses",
+    "category": "utility"
   },
   {
     "title": "Jetter N",
-    "description": "A flanger with negative feedback, producing \"underwater\" style sound"
+    "description": "A flanger with negative feedback, producing \"underwater\" style sound",
+    "category": "modulation"
   },
   {
     "title": "Trem Jet",
-    "description": "Combines flanger and tremolo in one"
+    "description": "Combines flanger and tremolo in one",
+    "category": "modulation"
   },
   {
     "title": "Pulser",
-    "description": "Based on a BBD-based blue vibrato pedal, producing natural analog vibrato sound"
+    "description": "Based on a BBD-based blue vibrato pedal, producing natural analog vibrato sound",
+    "category": "modulation"
   },
   {
     "title": "Grand Vibrato",
-    "description": "Based on the legendary huge ensemble chorus pedal born in late 1970s (vibrato mode), producing rich, shimmering vintage analog vibrato tone"
+    "description": "Based on the legendary huge ensemble chorus pedal born in late 1970s (vibrato mode), producing rich, shimmering vintage analog vibrato tone",
+    "category": "modulation"
   },
   {
     "title": "Shiver T",
-    "description": "A special vibrato with touch- sensitive dynamic depth control"
+    "description": "A special vibrato with touch- sensitive dynamic depth control",
+    "category": "modulation"
   },
   {
     "title": "90 Phaser",
-    "description": "Based on legendary MXR® M101 Phase 90*"
+    "description": "Based on legendary MXR® M101 Phase 90*",
+    "category": "modulation"
   },
   {
     "title": "Green Phaser",
-    "description": "Based on a legendary 2-knob green phaser with sharp sound character"
+    "description": "Based on a legendary 2-knob green phaser with sharp sound character",
+    "category": "modulation"
   },
   {
     "title": "Revolver",
-    "description": "Based on legendary Shin-ei® Uni- Vibe®*"
+    "description": "Based on legendary Shin-ei® Uni- Vibe®*",
+    "category": "modulation"
   },
   {
     "title": "Helicopter",
-    "description": "Based on legendary Demeter® TRM- 1 Tremulator*, offering classical opto tremolo sound"
+    "description": "Based on legendary Demeter® TRM- 1 Tremulator*, offering classical opto tremolo sound",
+    "category": "modulation"
   },
   {
     "title": "Custom Trem",
-    "description": "A custom tremolo with 4 different waveforms and super wide tonal range"
+    "description": "A custom tremolo with 4 different waveforms and super wide tonal range",
+    "category": "modulation"
   },
   {
     "title": "Tweed Lux",
-    "description": "Based on Fender® Tweed Deluxe* (bright channel, 5E3 version)"
+    "description": "Based on Fender® Tweed Deluxe* (bright channel, 5E3 version)",
+    "category": "amps",
+    "subtype": "bright"
   },
   {
     "title": "Baseman Norm",
-    "description": "Based on Fender® ’59 Bassman®* (normal channel)"
+    "description": "Based on Fender® ’59 Bassman®* (normal channel)",
+    "category": "amps",
+    "subtype": "normal"
   },
   {
     "title": "Black Twin",
-    "description": "Based on Fender® ’65 Twin Reverb®*"
+    "description": "Based on Fender® ’65 Twin Reverb®*",
+    "category": "reverb"
   },
   {
     "title": "Voxy 30HW Norm",
-    "description": "Based on VOX® AC30HW* (normal channel)"
+    "description": "Based on VOX® AC30HW* (normal channel)",
+    "category": "amps",
+    "subtype": "normal"
   },
   {
     "title": "Jazz Clean",
-    "description": "Based on the legendary “Jazz Chorus” solid state combo"
+    "description": "Based on the legendary “Jazz Chorus” solid state combo",
+    "category": "modulation"
   },
   {
     "title": "Emperor Clean",
-    "description": "Based Matchless™ Chieftain 212 combo* (clean tone)"
+    "description": "Based Matchless™ Chieftain 212 combo* (clean tone)",
+    "category": "amps",
+    "subtype": "clean"
   },
   {
     "title": "Superstar Clean",
-    "description": "Based on Mesa/Boogie® Lone Star™ (CH1)"
+    "description": "Based on Mesa/Boogie® Lone Star™ (CH1)",
+    "category": "utility"
   },
   {
     "title": "Glacian Clean",
-    "description": "Based on Bogner ® Shiva* (20th Anniversary version, Ch1)"
+    "description": "Based on Bogner ® Shiva* (20th Anniversary version, Ch1)",
+    "category": "utility"
   },
   {
     "title": "Tweed Prince",
-    "description": "The Tweed Prince is an amp simulator based on one of the legendary studio combo amps: Fender® Tweed Princeton Amp* (5F2-A version), another \"huge tone in a small box\" masterpiece which remains popular among players, builders and collectors. A Tone knob makes it more versatile."
+    "description": "The Tweed Prince is an amp simulator based on one of the legendary studio combo amps: Fender® Tweed Princeton Amp* (5F2-A version), another \"huge tone in a small box\" masterpiece which remains popular among players, builders and collectors. A Tone knob makes it more versatile.",
+    "category": "amps"
   },
   {
     "title": "Black Prince",
-    "description": "The Black Prince is an amp simulator based on the Fender® Blackface Princeton®* amp (AA964 version). Push it to the verge of breakup you'll find the fantastic tone beloved by lots of musicians."
+    "description": "The Black Prince is an amp simulator based on the Fender® Blackface Princeton®* amp (AA964 version). Push it to the verge of breakup you'll find the fantastic tone beloved by lots of musicians.",
+    "category": "amps"
   },
   {
     "title": "Match 30 Clean",
-    "description": "Match 30 Clean is based on the unbeatable Matchless\" DC- 30 combo* - one of the earliest boutique amps, which takes the legendary UK-style Class A sound to a new level."
+    "description": "Match 30 Clean is based on the unbeatable Matchless\" DC- 30 combo* - one of the earliest boutique amps, which takes the legendary UK-style Class A sound to a new level.",
+    "category": "amps",
+    "subtype": "clean"
   },
   {
     "title": "Baseman Bright",
-    "description": "Based on Fender® ’59 Bassman®* (bright channel)"
+    "description": "Based on Fender® ’59 Bassman®* (bright channel)",
+    "category": "amps",
+    "subtype": "bright"
   },
   {
     "title": "Voxy 30HW TB",
-    "description": "Based on VOX® AC30HW* (Top Boost channel)"
+    "description": "Based on VOX® AC30HW* (Top Boost channel)",
+    "category": "drives",
+    "subtype": "boost"
   },
   {
     "title": "Emperor Drive",
-    "description": "Based on Matchless™ Chieftain 212 combo* (dirty tone)"
+    "description": "Based on Matchless™ Chieftain 212 combo* (dirty tone)",
+    "category": "drives",
+    "subtype": "boost"
   },
   {
     "title": "Superstar Drive",
-    "description": "Based on Mesa/Boogie® Lone Star™ (CH2)"
+    "description": "Based on Mesa/Boogie® Lone Star™ (CH2)",
+    "category": "drives",
+    "subtype": "boost"
   },
   {
     "title": "Marshell 45",
-    "description": "Based on Marshall® JTM45* (normal channel)"
+    "description": "Based on Marshall® JTM45* (normal channel)",
+    "category": "reverb",
+    "subtype": "hall"
   },
   {
     "title": "Marshell 45+",
-    "description": "Based on Marshall® JTM45* (High Treble channel)"
+    "description": "Based on Marshall® JTM45* (High Treble channel)",
+    "category": "reverb",
+    "subtype": "hall"
   },
   {
     "title": "Marshell 45 Jump",
-    "description": "Based on Marshall®JTM45* (\"Jump\" connection)"
+    "description": "Based on Marshall®JTM45* (\"Jump\" connection)",
+    "category": "reverb",
+    "subtype": "hall"
   },
   {
     "title": "Marshell 50",
-    "description": "Based on Marshall® JMP50* (normal channel)"
+    "description": "Based on Marshall® JMP50* (normal channel)",
+    "category": "reverb",
+    "subtype": "hall"
   },
   {
     "title": "Marshell 50+",
-    "description": "Based on Marshall® JMP50* (High Treble channel)"
+    "description": "Based on Marshall® JMP50* (High Treble channel)",
+    "category": "reverb",
+    "subtype": "hall"
   },
   {
     "title": "Marshell 50 Jump",
-    "description": "Based on Marshall® JMP50* (\"Jump\" connection)"
+    "description": "Based on Marshall® JMP50* (\"Jump\" connection)",
+    "category": "reverb",
+    "subtype": "hall"
   },
   {
     "title": "Hot Kitty Drive",
-    "description": "Based on Bad Cat® Hot Cat 30* (drive channel)"
+    "description": "Based on Bad Cat® Hot Cat 30* (drive channel)",
+    "category": "drives",
+    "subtype": "boost"
   },
   {
     "title": "Messe IIC+ 1",
-    "description": "Based on Mesa/Boogie® Mark II C+™ (Lead channel) with 3 different onboard switch combinations"
+    "description": "Based on Mesa/Boogie® Mark II C+™ (Lead channel) with 3 different onboard switch combinations",
+    "category": "amps",
+    "subtype": "lead"
   },
   {
     "title": "Messe IIC+ 2",
-    "description": "Based on Mesa/Boogie® Mark II C+™ (Lead channel) with 3 different onboard switch combinations"
+    "description": "Based on Mesa/Boogie® Mark II C+™ (Lead channel) with 3 different onboard switch combinations",
+    "category": "amps",
+    "subtype": "lead"
   },
   {
     "title": "Messe IIC+ 3",
-    "description": "Based on Mesa/Boogie® Mark II C+™ (Lead channel) with 3 different onboard switch combinations"
+    "description": "Based on Mesa/Boogie® Mark II C+™ (Lead channel) with 3 different onboard switch combinations",
+    "category": "amps",
+    "subtype": "lead"
   },
   {
     "title": "Soloist 100 Crunch",
-    "description": "Based on Soldano® SLO100* (normal channel, dirty sound)"
+    "description": "Based on Soldano® SLO100* (normal channel, dirty sound)",
+    "category": "amps",
+    "subtype": "crunch"
   },
   {
     "title": "Marshell 800",
-    "description": "Based on Marshall® JCM800*"
+    "description": "Based on Marshall® JCM800*",
+    "category": "reverb",
+    "subtype": "hall"
   },
   {
     "title": "Fryman B1",
-    "description": "Based on the famous“Brown Eye”UK-style boutique amp head (BE channel) with 2 different onboard switch combinations"
+    "description": "Based on the famous“Brown Eye”UK-style boutique amp head (BE channel) with 2 different onboard switch combinations",
+    "category": "amps"
   },
   {
     "title": "Fryman B2",
-    "description": "Based on the famous“Brown Eye”UK-style boutique amp head (BE channel) with 2 different onboard switch combinations"
+    "description": "Based on the famous“Brown Eye”UK-style boutique amp head (BE channel) with 2 different onboard switch combinations",
+    "category": "amps"
   },
   {
     "title": "Glacian Drive",
-    "description": "Based on Bogner® Shiva* (20th Anniversary version, Ch2)"
+    "description": "Based on Bogner® Shiva* (20th Anniversary version, Ch2)",
+    "category": "drives",
+    "subtype": "boost"
   },
   {
     "title": "Marshell 900",
-    "description": "Based on Marshall® JCM900* (Model 4100, channel B)"
+    "description": "Based on Marshall® JCM900* (Model 4100, channel B)",
+    "category": "reverb",
+    "subtype": "hall"
   },
   {
     "title": "Dizzle VH B",
-    "description": "Based on Diezel® VH4* (CH3, blue version)"
+    "description": "Based on Diezel® VH4* (CH3, blue version)",
+    "category": "utility"
   },
   {
     "title": "Dizzle VH S",
-    "description": "Based on Diezel® VH4* (CH3, silver version)"
+    "description": "Based on Diezel® VH4* (CH3, silver version)",
+    "category": "utility"
   },
   {
     "title": "Engle Saga 1",
-    "description": "Based on ENGL® Savage 120 E610* (CH4, contour off)"
+    "description": "Based on ENGL® Savage 120 E610* (CH4, contour off)",
+    "category": "utility"
   },
   {
     "title": "Engle Saga 2",
-    "description": "Based on ENGL® Savage 120 E610* (CH4, contour on)"
+    "description": "Based on ENGL® Savage 120 E610* (CH4, contour on)",
+    "category": "utility"
   },
   {
     "title": "Fryman HB",
-    "description": "Based on the famous“Brown Eye”UK-style boutique amp head (HBE channel) with 2 different onboard switch combinations"
+    "description": "Based on the famous“Brown Eye”UK-style boutique amp head (HBE channel) with 2 different onboard switch combinations",
+    "category": "amps"
   },
   {
     "title": "Eddie 51",
-    "description": "Based on Peavey® 5150® (LEAD channel)"
+    "description": "Based on Peavey® 5150® (LEAD channel)",
+    "category": "amps",
+    "subtype": "lead"
   },
   {
     "title": "Soloist 100 Lead",
-    "description": "Based on Soldano® SLO100* (overdrive channel)"
+    "description": "Based on Soldano® SLO100* (overdrive channel)",
+    "category": "drives",
+    "subtype": "overdrive"
   },
   {
     "title": "Messe IV Lead 1",
-    "description": "Based on Mesa/Boogie® Mark IV™ (Lead channel) with 3 different onboard switch combinations"
+    "description": "Based on Mesa/Boogie® Mark IV™ (Lead channel) with 3 different onboard switch combinations",
+    "category": "amps",
+    "subtype": "lead"
   },
   {
     "title": "Messe IV Lead 2",
-    "description": "Based on Mesa/Boogie® Mark IV™ (Lead channel) with 3 different onboard switch combinations"
+    "description": "Based on Mesa/Boogie® Mark IV™ (Lead channel) with 3 different onboard switch combinations",
+    "category": "amps",
+    "subtype": "lead"
   },
   {
     "title": "Messe IV Lead 3",
-    "description": "Based on Mesa/Boogie® Mark IV™ (Lead channel) with 3 different onboard switch combinations"
+    "description": "Based on Mesa/Boogie® Mark IV™ (Lead channel) with 3 different onboard switch combinations",
+    "category": "amps",
+    "subtype": "lead"
   },
   {
     "title": "Tangerine R100",
-    "description": "Based on Orange® Rockerverb 100™* (Dirty channel)"
+    "description": "Based on Orange® Rockerverb 100™* (Dirty channel)",
+    "category": "amps"
   },
   {
     "title": "Rector Dual V",
-    "description": "Based on Mesa/Boogie® Dual Rectifier® (CH3, vintage mode)"
+    "description": "Based on Mesa/Boogie® Dual Rectifier® (CH3, vintage mode)",
+    "category": "utility"
   },
   {
     "title": "Rector Dual M",
-    "description": "Based on Mesa/Boogie® Dual Rectifier® (CH3, modern mode)"
+    "description": "Based on Mesa/Boogie® Dual Rectifier® (CH3, modern mode)",
+    "category": "utility"
   },
   {
     "title": "Dizzle VH+ B",
-    "description": "Based on Diezel® VH4* (CH4, blue version)"
+    "description": "Based on Diezel® VH4* (CH4, blue version)",
+    "category": "utility"
   },
   {
     "title": "Dizzle VH+ S",
-    "description": "Based on Diezel® VH4* (CH4, silver version)"
+    "description": "Based on Diezel® VH4* (CH4, silver version)",
+    "category": "utility"
   },
   {
     "title": "Boger XT Red M",
-    "description": "Based on Bogner® Ecstasy* (\"Red\" channel, Modern mode)"
+    "description": "Based on Bogner® Ecstasy* (\"Red\" channel, Modern mode)",
+    "category": "amps"
   },
   {
     "title": "Alchemy Pre",
-    "description": "Based on Alembic™ F-2B* preamp"
+    "description": "Based on Alembic™ F-2B* preamp",
+    "category": "amps"
   },
   {
     "title": "Ampage Classic",
-    "description": "Based on Ampeg® SVT* bass amp"
+    "description": "Based on Ampeg® SVT* bass amp",
+    "category": "amps"
   },
   {
     "title": "Ampage Flip",
-    "description": "Based on Ampeg® B-15* \"Flip Top” bass amp"
+    "description": "Based on Ampeg® B-15* \"Flip Top” bass amp",
+    "category": "amps"
   },
   {
     "title": "Voxy Bass",
-    "description": "Based on vintage VOX®* AC-100* bass amp"
+    "description": "Based on vintage VOX®* AC-100* bass amp",
+    "category": "amps"
   },
   {
     "title": "Messe Bass 400",
-    "description": "Based on Mesa/Boogie® Bass 400* amp"
+    "description": "Based on Mesa/Boogie® Bass 400* amp",
+    "category": "amps"
   },
   {
     "title": "Acoustic Preamp 1",
-    "description": "Based on AER® Colourizer 2* acoustic preamp with 2 different onboard switch combinations"
+    "description": "Based on AER® Colourizer 2* acoustic preamp with 2 different onboard switch combinations",
+    "category": "amps"
   },
   {
     "title": "Acoustic Preamp 2",
-    "description": "Based on AER® Colourizer 2* acoustic preamp with 2 different onboard switch combinations"
+    "description": "Based on AER® Colourizer 2* acoustic preamp with 2 different onboard switch combinations",
+    "category": "amps"
   },
   {
     "title": "Super Zep 1x6",
-    "description": "Supro®* 1x6\" cabinet with oval speaker"
+    "description": "Supro®* 1x6\" cabinet with oval speaker",
+    "category": "cabs",
+    "subtype": "1x6"
   },
   {
     "title": "Tweed Chap 1x8",
-    "description": "Vintage Fender® Champ* 1x8\" cabinet"
+    "description": "Vintage Fender® Champ* 1x8\" cabinet",
+    "category": "cabs",
+    "subtype": "1x8"
   },
   {
     "title": "Black Lux 1x12",
-    "description": "Vintage Fender® Deluxe* 1x12\" cabinet"
+    "description": "Vintage Fender® Deluxe* 1x12\" cabinet",
+    "category": "cabs",
+    "subtype": "1x12"
   },
   {
     "title": "Black Vint 1x12",
-    "description": "Vintage Fender® Vibrolux* 1x12\" cabinet"
+    "description": "Vintage Fender® Vibrolux* 1x12\" cabinet",
+    "category": "cabs",
+    "subtype": "1x12"
   },
   {
     "title": "Glacian 1x12",
-    "description": "Bogner® Shiva* 1x12\" cabinet"
+    "description": "Bogner® Shiva* 1x12\" cabinet",
+    "category": "cabs",
+    "subtype": "1x12"
   },
   {
     "title": "Bad Kitty 1x12",
-    "description": "Black Cat® Hot Cat* 1x12\" cabinet"
+    "description": "Black Cat® Hot Cat* 1x12\" cabinet",
+    "category": "cabs",
+    "subtype": "1x12"
   },
   {
     "title": "Voxy 1x12",
-    "description": "Vintage VOX® AC15* 1x12\" cabinet"
+    "description": "Vintage VOX® AC15* 1x12\" cabinet",
+    "category": "cabs",
+    "subtype": "1x12"
   },
   {
     "title": "Tweed Lux 1x12",
-    "description": "Fender® Tweed Deluxe* 1x12 cabinet"
+    "description": "Fender® Tweed Deluxe* 1x12 cabinet",
+    "category": "cabs",
+    "subtype": "1x12"
   },
   {
     "title": "Ace 20 1x12",
-    "description": "Morgan® AC-20 Deluxe* 1x12 cabinet"
+    "description": "Morgan® AC-20 Deluxe* 1x12 cabinet",
+    "category": "cabs",
+    "subtype": "1x12"
   },
   {
     "title": "UK G12M 1x12",
-    "description": "Marshall®* 1x12\" cabinet"
+    "description": "Marshall®* 1x12\" cabinet",
+    "category": "cabs",
+    "subtype": "1x12"
   },
   {
     "title": "Voxy 2x12",
-    "description": "Vintage VOX® AC30* 2x12\" cabinet"
+    "description": "Vintage VOX® AC30* 2x12\" cabinet",
+    "category": "cabs",
+    "subtype": "2x12"
   },
   {
     "title": "Emperor 2x12",
-    "description": "Matchless® Chieftain* 2x12\" cabinet"
+    "description": "Matchless® Chieftain* 2x12\" cabinet",
+    "category": "cabs",
+    "subtype": "2x12"
   },
   {
     "title": "Jazz Twin 2x12",
-    "description": "Legendary \"Jazz Chorus\" 2x12\" cabinet"
+    "description": "Legendary \"Jazz Chorus\" 2x12\" cabinet",
+    "category": "cabs",
+    "subtype": "2x12"
   },
   {
     "title": "Black Twin 2x12",
-    "description": "Vintage Fender® ’65 Twin Reverb* 2x12\" cabinet"
+    "description": "Vintage Fender® ’65 Twin Reverb* 2x12\" cabinet",
+    "category": "cabs",
+    "subtype": "2x12"
   },
   {
     "title": "Tweed Super 2x10",
-    "description": "A custom Fender® Tweed* 2x10\" cabinet"
+    "description": "A custom Fender® Tweed* 2x10\" cabinet",
+    "category": "cabs",
+    "subtype": "2x10"
   },
   {
     "title": "Boutique 2x12",
-    "description": "A unique custom 2x12\" cabinet"
+    "description": "A unique custom 2x12\" cabinet",
+    "category": "cabs",
+    "subtype": "2x12"
   },
   {
     "title": "Baseman 2x12",
-    "description": "Vintgae Fender® \"Piggyback\" Bassman®* 2x12\" cabinet"
+    "description": "Vintgae Fender® \"Piggyback\" Bassman®* 2x12\" cabinet",
+    "category": "cabs",
+    "subtype": "2x12"
   },
   {
     "title": "Superb 2x12",
-    "description": "Supro® 1624T* 2x12 cabinet\""
+    "description": "Supro® 1624T* 2x12 cabinet\"",
+    "category": "cabs",
+    "subtype": "2x12"
   },
   {
     "title": "Superstar 2x12",
-    "description": "Mesa/Boogie® Lonestar* 2x12\" cabinet"
+    "description": "Mesa/Boogie® Lonestar* 2x12\" cabinet",
+    "category": "cabs",
+    "subtype": "2x12"
   },
   {
     "title": "Twin Rock 2x12",
-    "description": "Two-Rock®* 2x12\" cabinet"
+    "description": "Two-Rock®* 2x12\" cabinet",
+    "category": "cabs",
+    "subtype": "2x12"
   },
   {
     "title": "Bluesky 2x12",
-    "description": "A custom 2x12\" cabinet with Celestion® Alnico Blue* speakers"
+    "description": "A custom 2x12\" cabinet with Celestion® Alnico Blue* speakers",
+    "category": "cabs",
+    "subtype": "2x12"
   },
   {
     "title": "Baseman 4x10",
-    "description": "Fender® '59 Bassman®* 4x10\" cabinet"
+    "description": "Fender® '59 Bassman®* 4x10\" cabinet",
+    "category": "cabs",
+    "subtype": "4x10"
   },
   {
     "title": "UK Lead 4x12",
-    "description": "Marshall® 1960AV* 4x12\" cabinet"
+    "description": "Marshall® 1960AV* 4x12\" cabinet",
+    "category": "cabs",
+    "subtype": "4x12"
   },
   {
     "title": "UK Trad 2x12",
-    "description": "68 Marshall® Basketweave* 4x12\" cabinet"
+    "description": "68 Marshall® Basketweave* 4x12\" cabinet",
+    "category": "cabs",
+    "subtype": "2x12"
   },
   {
     "title": "UK Modern 4x12",
-    "description": "Custom modified Marshall®* 4x12\" cabinet"
+    "description": "Custom modified Marshall®* 4x12\" cabinet",
+    "category": "cabs",
+    "subtype": "4x12"
   },
   {
     "title": "UK Green 4x12",
-    "description": "Vintage Marshall® 4x12\" cabinet with Celestion® Greenback®* speakers"
+    "description": "Vintage Marshall® 4x12\" cabinet with Celestion® Greenback®* speakers",
+    "category": "cabs",
+    "subtype": "4x12"
   },
   {
     "title": "Eddie 4x12",
-    "description": "Peavey® 6505* 4x12\" cabinet"
+    "description": "Peavey® 6505* 4x12\" cabinet",
+    "category": "cabs",
+    "subtype": "4x12"
   },
   {
     "title": "Rector 4x12",
-    "description": "Mesa/Boogie® Rectifier®* 4x12\" cabinet"
+    "description": "Mesa/Boogie® Rectifier®* 4x12\" cabinet",
+    "category": "cabs",
+    "subtype": "4x12"
   },
   {
     "title": "Boger 4x12",
-    "description": "Bogner®* 4x12\" cabinet"
+    "description": "Bogner®* 4x12\" cabinet",
+    "category": "cabs",
+    "subtype": "4x12"
   },
   {
     "title": "Engle 4x12",
-    "description": "ENGL®* 4x12\" cabinet"
+    "description": "ENGL®* 4x12\" cabinet",
+    "category": "cabs",
+    "subtype": "4x12"
   },
   {
     "title": "Urban 4x12",
-    "description": "Bogner® Uberkab* 4x12\" cabinet"
+    "description": "Bogner® Uberkab* 4x12\" cabinet",
+    "category": "cabs",
+    "subtype": "4x12"
   },
   {
     "title": "Soloist 4x12",
-    "description": "Soldano®* 4x12\" caninet"
+    "description": "Soldano®* 4x12\" caninet",
+    "category": "cabs",
+    "subtype": "4x12"
   },
   {
     "title": "Tang 4x12",
-    "description": "Orange® PPC412* 4x12\" cabinet"
+    "description": "Orange® PPC412* 4x12\" cabinet",
+    "category": "cabs",
+    "subtype": "4x12"
   },
   {
     "title": "Hiway 4x12",
-    "description": "Vintage Hiwatt® SE4123* 4x12\" cabinet"
+    "description": "Vintage Hiwatt® SE4123* 4x12\" cabinet",
+    "category": "cabs",
+    "subtype": "4x12"
   },
   {
     "title": "UK Black 4x12",
-    "description": "1968 Marshall®* 4x12\" cabinet"
+    "description": "1968 Marshall®* 4x12\" cabinet",
+    "category": "cabs",
+    "subtype": "4x12"
   },
   {
     "title": "The Way 4x12",
-    "description": "Vintage WEM®* 4x12\" cabinet"
+    "description": "Vintage WEM®* 4x12\" cabinet",
+    "category": "cabs",
+    "subtype": "4x12"
   },
   {
     "title": "Dizzle 4x12",
-    "description": "Diezel®* 4x12\" cabinet"
+    "description": "Diezel®* 4x12\" cabinet",
+    "category": "cabs",
+    "subtype": "4x12"
   },
   {
     "title": "Triple 4x12",
-    "description": "Hughes & Kettner® Triamp* 4x12\" cabinet"
+    "description": "Hughes & Kettner® Triamp* 4x12\" cabinet",
+    "category": "cabs",
+    "subtype": "4x12"
   },
   {
     "title": "UK T75 4x12",
-    "description": "Marshall®* 4x12\" cabinet with Celestion® G12T-75* speakers"
+    "description": "Marshall®* 4x12\" cabinet with Celestion® G12T-75* speakers",
+    "category": "cabs",
+    "subtype": "4x12"
   },
   {
     "title": "US King 4x12",
-    "description": "Mesa/Boogie® Road King®* 4x12\" cabinet"
+    "description": "Mesa/Boogie® Road King®* 4x12\" cabinet",
+    "category": "cabs",
+    "subtype": "4x12"
   },
   {
     "title": "Adam 1x15",
-    "description": "David Eden®* 1x15\" bass cabinet"
+    "description": "David Eden®* 1x15\" bass cabinet",
+    "category": "cabs",
+    "subtype": "1x15"
   },
   {
     "title": "Worker 1x15",
-    "description": "SWR®* 1x15\" bass cabinet"
+    "description": "SWR®* 1x15\" bass cabinet",
+    "category": "cabs",
+    "subtype": "1x15"
   },
   {
     "title": "Flip Top 1x15",
-    "description": "Ampeg® PF-115HE* 1x15\" bass cabinet"
+    "description": "Ampeg® PF-115HE* 1x15\" bass cabinet",
+    "category": "cabs",
+    "subtype": "1x15"
   },
   {
     "title": "US Bass 2x10",
-    "description": "Mesa/Boogie®* 2x10\" bass cabinet"
+    "description": "Mesa/Boogie®* 2x10\" bass cabinet",
+    "category": "cabs",
+    "subtype": "2x10"
   },
   {
     "title": "Mark 2x10",
-    "description": "Mark Bass®* 4x10\" bass cabinet"
+    "description": "Mark Bass®* 4x10\" bass cabinet",
+    "category": "cabs",
+    "subtype": "2x10"
   },
   {
     "title": "Adam 4x10",
-    "description": "David Eden®* 4x10\" bass cabinet"
+    "description": "David Eden®* 4x10\" bass cabinet",
+    "category": "cabs",
+    "subtype": "4x10"
   },
   {
     "title": "Ampage 4x10",
-    "description": "Ampeg® SVT-410HE* 4x10\" bass cabinet"
+    "description": "Ampeg® SVT-410HE* 4x10\" bass cabinet",
+    "category": "cabs",
+    "subtype": "4x10"
   },
   {
     "title": "Worker 4x10",
-    "description": "SWR® Workingman's* 4x10\" bass cabinet"
+    "description": "SWR® Workingman's* 4x10\" bass cabinet",
+    "category": "cabs",
+    "subtype": "4x10"
   },
   {
     "title": "Hacker 4x12",
-    "description": "Hartke®* 4x12\" bass cabinet"
+    "description": "Hartke®* 4x12\" bass cabinet",
+    "category": "cabs",
+    "subtype": "4x12"
   },
   {
     "title": "Ampage 8x10",
-    "description": "Ampeg SVT-810E* 8x10\" bass cabinet"
+    "description": "Ampeg SVT-810E* 8x10\" bass cabinet",
+    "category": "cabs",
+    "subtype": "8x10"
   },
   {
     "title": "Dreadnought 1",
-    "description": "Dreadnought guitar simulation 1"
+    "description": "Dreadnought guitar simulation 1",
+    "category": "utility"
   },
   {
     "title": "Dreadnought 2",
-    "description": "Dreadnought guitar simulation 2"
+    "description": "Dreadnought guitar simulation 2",
+    "category": "utility"
   },
   {
     "title": "Orchestal",
-    "description": "Simulates an OM type acoustic guitar"
+    "description": "Simulates an OM type acoustic guitar",
+    "category": "acoustic"
   },
   {
     "title": "Jumbo",
-    "description": "Simulates a jumbo acoustic guitar"
+    "description": "Simulates a jumbo acoustic guitar",
+    "category": "acoustic"
   },
   {
     "title": "Hum Bird",
-    "description": "Simulates the iconic \"H-Bird\" acoustic guitar"
+    "description": "Simulates the iconic \"H-Bird\" acoustic guitar",
+    "category": "acoustic"
   },
   {
     "title": "Auditorium",
-    "description": "Simulates a GA type acoustic guitar"
+    "description": "Simulates a GA type acoustic guitar",
+    "category": "acoustic"
   },
   {
     "title": "Classical",
-    "description": "Simulates a classical guitar"
+    "description": "Simulates a classical guitar",
+    "category": "utility"
   },
   {
     "title": "Mandolin",
-    "description": "Simulates a mandolon"
+    "description": "Simulates a mandolon",
+    "category": "utility"
   },
   {
     "title": "Fretless Bass",
-    "description": "Simulates a fretless acoustic bass"
+    "description": "Simulates a fretless acoustic bass",
+    "category": "acoustic"
   },
   {
     "title": "Double Bass",
-    "description": "Simulates a double bass"
+    "description": "Simulates a double bass",
+    "category": "utility"
   },
   {
     "title": "User IR 1-10",
-    "description": "For loading 3rd party IR files; the output will be muted when switched to an empty User IR slot"
+    "description": "For loading 3rd party IR files; the output will be muted when switched to an empty User IR slot",
+    "category": "ir",
+    "subtype": "user"
   },
   {
     "title": "OFF",
-    "description": "Based On: N/A; Type: N/A"
+    "description": "Based On: N/A; Type: N/A",
+    "category": "mics",
+    "subtype": "off"
   },
   {
     "title": "Dyn 57",
-    "description": "Based On: Shure® SM57*; Type: Dynamic"
+    "description": "Based On: Shure® SM57*; Type: Dynamic",
+    "category": "mics",
+    "subtype": "dynamic"
   },
   {
     "title": "Dyn 58",
-    "description": "Based On: Shure® SM58*; Type: Dynamic"
+    "description": "Based On: Shure® SM58*; Type: Dynamic",
+    "category": "mics",
+    "subtype": "dynamic"
   },
   {
     "title": "Dyn 421",
-    "description": "Based On: Sennheiser® MD421*; Type: Dynamic"
+    "description": "Based On: Sennheiser® MD421*; Type: Dynamic",
+    "category": "mics",
+    "subtype": "dynamic"
   },
   {
     "title": "Dyn 16",
-    "description": "Based On: Electro-Voice RE16*; Type: Dynamic"
+    "description": "Based On: Electro-Voice RE16*; Type: Dynamic",
+    "category": "mics",
+    "subtype": "dynamic"
   },
   {
     "title": "Dyn 112",
-    "description": "Based On: AKG® D112*; Type: Dynamic"
+    "description": "Based On: AKG® D112*; Type: Dynamic",
+    "category": "mics",
+    "subtype": "dynamic"
   },
   {
     "title": "Dyn 609",
-    "description": "Based On: Sennheiser® e609*; Type: Dynamic"
+    "description": "Based On: Sennheiser® e609*; Type: Dynamic",
+    "category": "mics",
+    "subtype": "dynamic"
   },
   {
     "title": "Con U67",
-    "description": "Based On: Neumann® U67*; Type: Condenser"
+    "description": "Based On: Neumann® U67*; Type: Condenser",
+    "category": "mics",
+    "subtype": "condenser"
   },
   {
     "title": "Con 87A",
-    "description": "Based On: Shure® Beta 87A*; Type: Condenser"
+    "description": "Based On: Shure® Beta 87A*; Type: Condenser",
+    "category": "mics",
+    "subtype": "condenser"
   },
   {
     "title": "Con U87",
-    "description": "Based On: Neumann® U87*; Type: Condenser"
+    "description": "Based On: Neumann® U87*; Type: Condenser",
+    "category": "mics",
+    "subtype": "condenser"
   },
   {
     "title": "Rib 121",
-    "description": "Based On: Royal® R121*; Type: Ribbon"
+    "description": "Based On: Royal® R121*; Type: Ribbon",
+    "category": "mics",
+    "subtype": "ribbon"
   },
   {
     "title": "Guitar EQ 1",
-    "description": "Equalizer designed for guitars"
+    "description": "Equalizer designed for guitars",
+    "category": "eq"
   },
   {
     "title": "Guitar EQ 2",
-    "description": "Equalizer designed for guitars"
+    "description": "Equalizer designed for guitars",
+    "category": "eq"
   },
   {
     "title": "Bass EQ 1",
-    "description": "Equalizer designed for basses"
+    "description": "Equalizer designed for basses",
+    "category": "eq"
   },
   {
     "title": "Bass EQ 2",
-    "description": "Equalizer designed for basses"
+    "description": "Equalizer designed for basses",
+    "category": "eq"
   },
   {
     "title": "Para EQ",
-    "description": "4-band parametric EQ with low/ high shelving filters suitable for any instrument"
+    "description": "4-band parametric EQ with low/ high shelving filters suitable for any instrument",
+    "category": "eq"
   },
   {
     "title": "Graphic EQ",
-    "description": "10-band graphic EQ suitable for any instrument"
+    "description": "10-band graphic EQ suitable for any instrument",
+    "category": "eq"
   },
   {
     "title": "V-EQ",
-    "description": "Based on the 5-band EQ module on Mesa/Boogie®* amps"
+    "description": "Based on the 5-band EQ module on Mesa/Boogie®* amps",
+    "category": "eq"
   },
   {
     "title": "Sweetie",
-    "description": "Based on the legendary 3-knob BBD analog delay pedal with \"REPEAT RATE\" control"
+    "description": "Based on the legendary 3-knob BBD analog delay pedal with \"REPEAT RATE\" control",
+    "category": "delay",
+    "subtype": "analog"
   },
   {
     "title": "Recaller",
-    "description": "Based on legendary Electro- Harmonix® Deluxe Memory Man®*"
+    "description": "Based on legendary Electro- Harmonix® Deluxe Memory Man®*",
+    "category": "delay",
+    "subtype": "analog"
   },
   {
     "title": "Pure Eko",
-    "description": "Produce pure, precised delay sound"
+    "description": "Produce pure, precised delay sound",
+    "category": "delay",
+    "subtype": "digital"
   },
   {
     "title": "Analog Eko",
-    "description": "Producing warm delay sound with analog feel"
+    "description": "Producing warm delay sound with analog feel",
+    "category": "delay",
+    "subtype": "analog"
   },
   {
     "title": "Mag Eko",
-    "description": "Simulates solid-state tape echo sound"
+    "description": "Simulates solid-state tape echo sound",
+    "category": "delay",
+    "subtype": "tape"
   },
   {
     "title": "Tube Eko",
-    "description": "Simulates tube-driven tape echo sound"
+    "description": "Simulates tube-driven tape echo sound",
+    "category": "delay",
+    "subtype": "tape"
   },
   {
     "title": "Backmask",
-    "description": "Producing a special delay effect with reversed feedback"
+    "description": "Producing a special delay effect with reversed feedback",
+    "category": "delay",
+    "subtype": "digital"
   },
   {
     "title": "Ping Pong",
-    "description": "A ping-pong delay producing stereo feedbadk bounces back and forth between left and right channels"
+    "description": "A ping-pong delay producing stereo feedbadk bounces back and forth between left and right channels",
+    "category": "delay",
+    "subtype": "digital"
   },
   {
     "title": "Multi Head",
-    "description": "A multi tap delay that simulates a huge 4-head tape echo machine"
+    "description": "A multi tap delay that simulates a huge 4-head tape echo machine",
+    "category": "delay",
+    "subtype": "tape"
   },
   {
     "title": "Slapback",
-    "description": "Simulates the classic slapback echo effect"
+    "description": "Simulates the classic slapback echo effect",
+    "category": "delay",
+    "subtype": "digital"
   },
   {
     "title": "Vintage Rack",
-    "description": "Reproduces the sound of a vintage 1980's rack-mount delay machine with slightly sample-reduced feedback"
+    "description": "Reproduces the sound of a vintage 1980's rack-mount delay machine with slightly sample-reduced feedback",
+    "category": "delay",
+    "subtype": "rack"
   },
   {
     "title": "Sweep Eko",
-    "description": "Producing a delay effect with sweeping filter modulated repeats"
+    "description": "Producing a delay effect with sweeping filter modulated repeats",
+    "category": "delay",
+    "subtype": "digital"
   },
   {
     "title": "Trem Eko",
-    "description": "Producing a delay effect with tremolo altered repeats"
+    "description": "Producing a delay effect with tremolo altered repeats",
+    "category": "delay",
+    "subtype": "digital"
   },
   {
     "title": "Lofi Eko",
-    "description": "Producing a delay effect with lo-fi'd repeats"
+    "description": "Producing a delay effect with lo-fi'd repeats",
+    "category": "delay",
+    "subtype": "digital"
   },
   {
     "title": "Ring Eko",
-    "description": "Producing a delay effect with ring modulated repeats"
+    "description": "Producing a delay effect with ring modulated repeats",
+    "category": "delay",
+    "subtype": "digital"
   },
   {
     "title": "Ekoverb",
-    "description": "Combines delay and reverb in one"
+    "description": "Combines delay and reverb in one",
+    "category": "delay",
+    "subtype": "digital"
   },
   {
     "title": "2290 Mod",
-    "description": "Note: This effect features stereo I/O configuration. This model is based on the delay sound of the legendary TC Electronic®2290 Dynamic Digital Delay + Effects Controls Processor* rack mount effect unit, which is widely used among countless musicians and studio producers. You can use Tap Tempo function to control the delay time by turning on the Sync switch. When the Sync switch is on, turn the Time knob to set a proper tap divide value. The default value is 1/4 (no division)."
+    "description": "Note: This effect features stereo I/O configuration. This model is based on the delay sound of the legendary TC Electronic®2290 Dynamic Digital Delay + Effects Controls Processor* rack mount effect unit, which is widely used among countless musicians and studio producers. You can use Tap Tempo function to control the delay time by turning on the Sync switch. When the Sync switch is on, turn the Time knob to set a proper tap divide value. The default value is 1/4 (no division).",
+    "category": "delay",
+    "subtype": "rack"
   },
   {
     "title": "Room",
-    "description": "Simulates the spaciousness of a room"
+    "description": "Simulates the spaciousness of a room",
+    "category": "reverb",
+    "subtype": "room"
   },
   {
     "title": "Hall",
-    "description": "Simulates the spaciousness of a performance hall"
+    "description": "Simulates the spaciousness of a performance hall",
+    "category": "reverb",
+    "subtype": "hall"
   },
   {
     "title": "Church",
-    "description": "Simulates the spaciousness of a church"
+    "description": "Simulates the spaciousness of a church",
+    "category": "utility"
   },
   {
     "title": "Plate",
-    "description": "Simulates the sound character produced by a vintage plate reverberator"
+    "description": "Simulates the sound character produced by a vintage plate reverberator",
+    "category": "reverb",
+    "subtype": "plate"
   },
   {
     "title": "Spring",
-    "description": "Simulates the sound character produced by a vintage spring reverberator"
+    "description": "Simulates the sound character produced by a vintage spring reverberator",
+    "category": "reverb",
+    "subtype": "spring"
   },
   {
     "title": "Izumi",
-    "description": "Special-tuned reverb effect with liquid-like decays and deep low ends"
+    "description": "Special-tuned reverb effect with liquid-like decays and deep low ends",
+    "category": "reverb"
   },
   {
     "title": "Northstar",
-    "description": "Special-tuned reverb effect with lush, bright decays"
+    "description": "Special-tuned reverb effect with lush, bright decays",
+    "category": "reverb"
   },
   {
     "title": "Oceandeep",
-    "description": "Special-tuned reverb effect with huge, deep decays"
+    "description": "Special-tuned reverb effect with huge, deep decays",
+    "category": "reverb"
   },
   {
     "title": "Sweet Space",
-    "description": "Produces a modulated reverb effect that is lush and sweet"
+    "description": "Produces a modulated reverb effect that is lush and sweet",
+    "category": "reverb"
   },
   {
     "title": "Shimmer",
-    "description": "Produce a rich, shimmering reverb effect"
+    "description": "Produce a rich, shimmering reverb effect",
+    "category": "reverb",
+    "subtype": "shimmer"
   },
   {
     "title": "Cloud",
-    "description": "Note: This effect features stereo I/O configuration. This reverb model creates a huge, thick reverb effect like curly clouds in the sky."
+    "description": "Note: This effect features stereo I/O configuration. This reverb model creates a huge, thick reverb effect like curly clouds in the sky.",
+    "category": "reverb",
+    "subtype": "ambient"
   },
   {
     "title": "Sound Clone 1-10",
-    "description": "This is for loading Sound Clone file by clicking \"Sound Clone Manage\" button."
+    "description": "This is for loading Sound Clone file by clicking \"Sound Clone Manage\" button.",
+    "category": "utility",
+    "subtype": "sound_clone"
   }
 ]

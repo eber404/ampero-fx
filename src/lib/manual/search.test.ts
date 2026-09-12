@@ -5,6 +5,7 @@ const items = [
   { title: 'Face Fuzz', description: 'Based on legendary Dallas-Arbiter Fuzz Face fuzz pedal' },
   { title: 'Cab/IR', description: 'All effects in this module share the same parameters' },
   { title: 'Voxy 2x12', description: 'Vintage VOX AC30 2x12 cabinet' },
+  { title: 'Black Tail', description: 'Based on legendary ProCo The Rat distortion', pedalboards: ['Ampero Mini', 'Ampero II Stomp'] },
 ];
 
 describe('filterManualItems', () => {
@@ -30,5 +31,15 @@ describe('filterManualItems', () => {
     filterManualItems(items, 'cab');
 
     expect(items).toEqual(original);
+  });
+
+  it('matches pedalboard names when present', () => {
+    expect(filterManualItems(items, 'stomp')).toEqual([
+      {
+        title: 'Black Tail',
+        description: 'Based on legendary ProCo The Rat distortion',
+        pedalboards: ['Ampero Mini', 'Ampero II Stomp'],
+      },
+    ]);
   });
 });

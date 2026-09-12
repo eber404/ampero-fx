@@ -70,6 +70,22 @@ function rowToFxItem(row: ManualTableRow, fallbackDescription = ''): ManualItem 
   };
 }
 
+function extractRowBasedFxItems(table: ManualTable): ManualItem[] {
+  const firstRow = table[0];
+  const firstTitle = normalizeTitle(firstRow[0]);
+  const firstDescription = normalizeCell(firstRow[1]);
+
+  if (!firstTitle || !firstDescription || firstDescription.length < 20 || isIgnorableTitle(firstTitle)) {
+    return [];
+  }
+
+  const fxItems = table
+    .map((row) => rowToFxItem(row))
+    .filter((item): item is ManualItem => Boolean(item));
+
+  return fxItems.length ? fxItems : [];
+}
+
 function rowToMicItem(row: ManualTableRow): ManualItem | null {
   const title = normalizeTitle(row[0]);
   const basedOn = normalizeCell(row[1]);
@@ -119,6 +135,12 @@ export function extractManualItems(tables: ManualTable[]): ManualItem[] {
           items.push(item);
         }
       }
+      continue;
+    }
+
+    const rowBasedFxItems = extractRowBasedFxItems(table);
+    if (rowBasedFxItems.length) {
+      items.push(...rowBasedFxItems);
       continue;
     }
 
