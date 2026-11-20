@@ -100,3 +100,28 @@ test('filters draft words with active tags before Enter and preserves results wh
   await search.fill('');
   await expect(page.getByText('1 of 3 effects', { exact: true })).toBeVisible();
 });
+
+test('filters by pedalboard and combines it with the text search', async ({ page }) => {
+  await page.route('**/data/hotone-effects.json', (route) => route.fulfill({
+    json: [
+      { title: 'Black Tail', description: 'Rat distortion', category: 'drives', pedalboards: ['Ampero Mini', 'Ampero II Stomp'] },
+      { title: 'Voxy 1x12', description: 'VOX cabinet', category: 'cabs', pedalboards: ['Ampero Mini'] },
+      { title: 'Stomp Phaser', description: 'Phase effect', category: 'modulation', pedalboards: ['Ampero II Stomp'] },
+    ],
+  }));
+  await page.goto('/');
+
+  const pedalboard = page.getByRole('combobox', { name: 'Pedalboard' });
+  await expect(pedalboard).toHaveValue('');
+  await pedalboard.selectOption('Ampero II Stomp');
+
+  await expect(page.getByText('2 of 3 effects', { exact: true })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Black Tail', exact: true })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Stomp Phaser', exact: true })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Voxy 1x12', exact: true })).toHaveCount(0);
+
+  await page.getByRole('textbox', { name: 'Search', exact: true }).fill('black');
+  await expect(page.getByText('1 of 3 effects', { exact: true })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Black Tail', exact: true })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Stomp Phaser', exact: true })).toHaveCount(0);
+});

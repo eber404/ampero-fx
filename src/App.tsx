@@ -103,6 +103,7 @@ export default function App() {
   const [items, setItems] = useState<HotoneUnifiedEffect[]>([]);
   const [query, setQuery] = useState('');
   const [tags, setTags] = useState<string[]>([]);
+  const [pedalboard, setPedalboard] = useState('');
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [reloadCount, setReloadCount] = useState(0);
@@ -140,10 +141,13 @@ export default function App() {
   }, [reloadCount]);
 
   const searchTerms = [...tags, ...queryTerms(query)];
-  const visibleItems = filterManualItems(items, searchTerms);
+  const pedalboards = [...new Set(items.flatMap((item) => item.pedalboards))].sort((a, b) => a.localeCompare(b));
+  const visibleItems = filterManualItems(items, searchTerms).filter(
+    (item) => !pedalboard || item.pedalboards.includes(pedalboard),
+  );
   const totalItems = items.length;
   const visibleCount = visibleItems.length;
-  const isSearching = searchTerms.length > 0;
+  const isSearching = searchTerms.length > 0 || Boolean(pedalboard);
 
   const countLabel = isSearching
     ? `${countFormat.format(visibleCount)} of ${countFormat.format(totalItems)} effects`
@@ -183,39 +187,59 @@ export default function App() {
                   ))}
                 </ul>
               ) : null}
-              <div className="relative">
-                <Input
-                  id="catalog-search"
-                  aria-describedby="search-hint"
-                  value={query}
-                  onChange={(event) => setQuery(event.target.value)}
-                  onKeyDown={(event) => {
-                    if (event.nativeEvent.isComposing) return;
-                    if (event.key === 'Enter') {
-                      event.preventDefault();
-                      setTags((current) => [...new Set([...current, ...queryTerms(query)])]);
-                      setQuery('');
-                    } else if (event.key === 'Backspace' && query.length === 0) {
-                      setTags((current) => current.slice(0, -1));
-                    }
-                  }}
-                  disabled={isLoading}
-                  className="pr-20"
-                />
-                {query || tags.length > 0 ? (
-                  <Button
-                    type="button"
-                    variant="ghost"
-                    size="sm"
-                    className="absolute right-2 top-1/2 -translate-y-1/2"
-                    onClick={() => {
-                      setTags([]);
-                      setQuery('');
+              <div className="grid gap-3 sm:grid-cols-[minmax(0,1fr)_13rem]">
+                <div className="relative">
+                  <Input
+                    id="catalog-search"
+                    aria-describedby="search-hint"
+                    value={query}
+                    onChange={(event) => setQuery(event.target.value)}
+                    onKeyDown={(event) => {
+                      if (event.nativeEvent.isComposing) return;
+                      if (event.key === 'Enter') {
+                        event.preventDefault();
+                        setTags((current) => [...new Set([...current, ...queryTerms(query)])]);
+                        setQuery('');
+                      } else if (event.key === 'Backspace' && query.length === 0) {
+                        setTags((current) => current.slice(0, -1));
+                      }
                     }}
+                    disabled={isLoading}
+                    className="pr-20"
+                  />
+                  {query || tags.length > 0 || pedalboard ? (
+                    <Button
+                      type="button"
+                      variant="ghost"
+                      size="sm"
+                      className="absolute right-2 top-1/2 -translate-y-1/2"
+                      onClick={() => {
+                        setTags([]);
+                        setQuery('');
+                        setPedalboard('');
+                      }}
+                    >
+                      Clear
+                    </Button>
+                  ) : null}
+                </div>
+                <div className="space-y-1">
+                  <label htmlFor="catalog-pedalboard" className="block text-xs font-medium text-zinc-400">
+                    Pedalboard
+                  </label>
+                  <select
+                    id="catalog-pedalboard"
+                    value={pedalboard}
+                    onChange={(event) => setPedalboard(event.target.value)}
+                    disabled={isLoading}
+                    className="flex h-10 w-full rounded-xl border border-zinc-800 bg-zinc-950/60 px-3 py-2 text-sm text-zinc-100 outline-none transition-colors focus:border-zinc-600 focus:ring-1 focus:ring-zinc-600/50 disabled:cursor-not-allowed disabled:opacity-50"
                   >
-                    Clear
-                  </Button>
-                ) : null}
+                    <option value="">All pedalboards</option>
+                    {pedalboards.map((name) => (
+                      <option key={name} value={name}>{name}</option>
+                    ))}
+                  </select>
+                </div>
               </div>
             </div>
 
