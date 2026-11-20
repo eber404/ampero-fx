@@ -113,6 +113,13 @@ test('filters by pedalboard and combines it with the text search', async ({ page
 
   const pedalboard = page.getByRole('combobox', { name: 'Pedalboard' });
   await expect(pedalboard).toHaveValue('');
+
+  const searchBounds = await page.getByRole('textbox', { name: 'Search', exact: true }).boundingBox();
+  const pedalboardBounds = await pedalboard.boundingBox();
+  expect(searchBounds).not.toBeNull();
+  expect(pedalboardBounds).not.toBeNull();
+  expect(Math.abs(searchBounds!.y - pedalboardBounds!.y)).toBeLessThanOrEqual(1);
+
   await pedalboard.selectOption('Ampero II Stomp');
 
   await expect(page.getByText('2 of 3 effects', { exact: true })).toBeVisible();

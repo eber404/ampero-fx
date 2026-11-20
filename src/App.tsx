@@ -166,10 +166,6 @@ export default function App() {
 
           <CardContent className="space-y-4 px-5 pb-5 sm:px-6 sm:pb-6">
             <div className="space-y-2">
-              <div className="flex items-center justify-between gap-4 text-xs text-zinc-400">
-                <label htmlFor="catalog-search" className="font-medium">Search</label>
-                <span id="search-hint">Enter to add tags</span>
-              </div>
               {tags.length > 0 ? (
                 <ul aria-label="Search tags" className="flex flex-wrap gap-2">
                   {tags.map((tag) => (
@@ -188,40 +184,46 @@ export default function App() {
                 </ul>
               ) : null}
               <div className="grid gap-3 sm:grid-cols-[minmax(0,1fr)_13rem]">
-                <div className="relative">
-                  <Input
-                    id="catalog-search"
-                    aria-describedby="search-hint"
-                    value={query}
-                    onChange={(event) => setQuery(event.target.value)}
-                    onKeyDown={(event) => {
-                      if (event.nativeEvent.isComposing) return;
-                      if (event.key === 'Enter') {
-                        event.preventDefault();
-                        setTags((current) => [...new Set([...current, ...queryTerms(query)])]);
-                        setQuery('');
-                      } else if (event.key === 'Backspace' && query.length === 0) {
-                        setTags((current) => current.slice(0, -1));
-                      }
-                    }}
-                    disabled={isLoading}
-                    className="pr-20"
-                  />
-                  {query || tags.length > 0 || pedalboard ? (
-                    <Button
-                      type="button"
-                      variant="ghost"
-                      size="sm"
-                      className="absolute right-2 top-1/2 -translate-y-1/2"
-                      onClick={() => {
-                        setTags([]);
-                        setQuery('');
-                        setPedalboard('');
+                <div className="space-y-1">
+                  <div className="flex items-center justify-between gap-4 text-xs text-zinc-400">
+                    <label htmlFor="catalog-search" className="font-medium">Search</label>
+                    <span id="search-hint">Enter to add tags</span>
+                  </div>
+                  <div className="relative">
+                    <Input
+                      id="catalog-search"
+                      aria-describedby="search-hint"
+                      value={query}
+                      onChange={(event) => setQuery(event.target.value)}
+                      onKeyDown={(event) => {
+                        if (event.nativeEvent.isComposing) return;
+                        if (event.key === 'Enter') {
+                          event.preventDefault();
+                          setTags((current) => [...new Set([...current, ...queryTerms(query)])]);
+                          setQuery('');
+                        } else if (event.key === 'Backspace' && query.length === 0) {
+                          setTags((current) => current.slice(0, -1));
+                        }
                       }}
-                    >
-                      Clear
-                    </Button>
-                  ) : null}
+                      disabled={isLoading}
+                      className="pr-20"
+                    />
+                    {query || tags.length > 0 || pedalboard ? (
+                      <Button
+                        type="button"
+                        variant="ghost"
+                        size="sm"
+                        className="absolute right-2 top-1/2 -translate-y-1/2"
+                        onClick={() => {
+                          setTags([]);
+                          setQuery('');
+                          setPedalboard('');
+                        }}
+                      >
+                        Clear
+                      </Button>
+                    ) : null}
+                  </div>
                 </div>
                 <div className="space-y-1">
                   <label htmlFor="catalog-pedalboard" className="block text-xs font-medium text-zinc-400">
