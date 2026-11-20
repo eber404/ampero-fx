@@ -112,13 +112,18 @@ test('filters by pedalboard and combines it with the text search', async ({ page
   await page.goto('/');
 
   const pedalboard = page.getByRole('combobox', { name: 'Pedalboard' });
+  const effectType = page.getByRole('combobox', { name: 'Effect type' });
   await expect(pedalboard).toHaveValue('');
+  await expect(effectType).toHaveValue('');
 
   const searchBounds = await page.getByRole('textbox', { name: 'Search', exact: true }).boundingBox();
   const pedalboardBounds = await pedalboard.boundingBox();
+  const effectTypeBounds = await effectType.boundingBox();
   expect(searchBounds).not.toBeNull();
   expect(pedalboardBounds).not.toBeNull();
+  expect(effectTypeBounds).not.toBeNull();
   expect(Math.abs(searchBounds!.y - pedalboardBounds!.y)).toBeLessThanOrEqual(1);
+  expect(Math.abs(searchBounds!.y - effectTypeBounds!.y)).toBeLessThanOrEqual(1);
 
   await pedalboard.selectOption('Ampero II Stomp');
 
@@ -131,4 +136,29 @@ test('filters by pedalboard and combines it with the text search', async ({ page
   await expect(page.getByText('1 of 3 effects', { exact: true })).toBeVisible();
   await expect(page.getByRole('heading', { name: 'Black Tail', exact: true })).toBeVisible();
   await expect(page.getByRole('heading', { name: 'Stomp Phaser', exact: true })).toHaveCount(0);
+});
+
+test('filters by effect type and combines it with the pedalboard filter', async ({ page }) => {
+  await page.route('**/data/hotone-effects.json', (route) => route.fulfill({
+    json: [
+      { title: 'Black Tail', description: 'Rat distortion', category: 'drives', pedalboards: ['Ampero Mini', 'Ampero II Stomp'] },
+      { title: 'Voxy 1x12', description: 'VOX cabinet', category: 'cabs', pedalboards: ['Ampero Mini'] },
+      { title: 'Stomp Hall', description: 'Hall reverb', category: 'reverb', pedalboards: ['Ampero II Stomp'] },
+    ],
+  }));
+  await page.goto('/');
+
+  const effectType = page.getByRole('combobox', { name: 'Effect type' });
+  await expect(effectType).toHaveValue('');
+  await expect(effectType.locator('option[value="amps"]')).toHaveCount(1);
+  await expect(effectType.locator('option[value="cabs"]')).toHaveCount(1);
+  await expect(effectType.locator('option[value="reverb"]')).toHaveCount(1);
+
+  await effectType.selectOption('reverb');
+  await expect(page.getByText('1 of 3 effects', { exact: true })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Stomp Hall', exact: true })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Black Tail', exact: true })).toHaveCount(0);
+
+  await page.getByRole('combobox', { name: 'Pedalboard' }).selectOption('Ampero Mini');
+  await expect(page.getByText('No effects match', { exact: false })).toBeVisible();
 });

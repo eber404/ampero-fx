@@ -6,10 +6,27 @@ import { Input } from './components/ui/input';
 import { Skeleton } from './components/ui/skeleton';
 import { categoryBadgeClass, categoryLabel } from './lib/manual/category-ui';
 import { filterManualItems, queryTerms } from './lib/manual/search';
+import type { ManualCategory } from './lib/manual/types';
 import { loadHotoneEffects } from './lib/hotone/load';
 import type { HotoneUnifiedEffect } from './lib/hotone/types';
 
 const countFormat = new Intl.NumberFormat('en-US');
+const effectTypes: ManualCategory[] = [
+  'amps',
+  'cabs',
+  'mics',
+  'ir',
+  'drives',
+  'dynamics',
+  'modulation',
+  'delay',
+  'reverb',
+  'eq',
+  'pitch',
+  'filters',
+  'acoustic',
+  'utility',
+];
 
 function formatLabel(value: string): string {
   return value
@@ -42,14 +59,14 @@ function CatalogSkeleton() {
   );
 }
 
-function EmptyState({ query }: { query: string }) {
+function EmptyState({ query, isFiltered }: { query: string; isFiltered: boolean }) {
   return (
     <Card className="border-dashed bg-transparent shadow-none">
       <CardHeader className="items-center text-center">
         <CardTitle className="text-base text-zinc-100 sm:text-lg">
-          {query ? `No effects match "${query.trim()}".` : 'No effects available.'}
+          {query ? `No effects match "${query.trim()}".` : isFiltered ? 'No effects match the active filters.' : 'No effects available.'}
         </CardTitle>
-        {query ? <CardDescription>Try a shorter search term.</CardDescription> : null}
+        {(query || isFiltered) ? <CardDescription>Try adjusting the filters.</CardDescription> : null}
       </CardHeader>
     </Card>
   );
@@ -104,6 +121,7 @@ export default function App() {
   const [query, setQuery] = useState('');
   const [tags, setTags] = useState<string[]>([]);
   const [pedalboard, setPedalboard] = useState('');
+  const [effectType, setEffectType] = useState<ManualCategory | ''>('');
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [reloadCount, setReloadCount] = useState(0);
@@ -142,12 +160,12 @@ export default function App() {
 
   const searchTerms = [...tags, ...queryTerms(query)];
   const pedalboards = [...new Set(items.flatMap((item) => item.pedalboards))].sort((a, b) => a.localeCompare(b));
-  const visibleItems = filterManualItems(items, searchTerms).filter(
-    (item) => !pedalboard || item.pedalboards.includes(pedalboard),
-  );
+  const visibleItems = filterManualItems(items, searchTerms)
+    .filter((item) => !pedalboard || item.pedalboards.includes(pedalboard))
+    .filter((item) => !effectType || item.category === effectType);
   const totalItems = items.length;
   const visibleCount = visibleItems.length;
-  const isSearching = searchTerms.length > 0 || Boolean(pedalboard);
+  const isSearching = searchTerms.length > 0 || Boolean(pedalboard) || Boolean(effectType);
 
   const countLabel = isSearching
     ? `${countFormat.format(visibleCount)} of ${countFormat.format(totalItems)} effects`
@@ -156,7 +174,7 @@ export default function App() {
   return (
     <main className="min-h-screen text-zinc-100">
       <div className="mx-auto flex min-h-screen w-full max-w-5xl flex-col gap-6 px-4 py-6 sm:px-6 sm:py-8 lg:px-8">
-        <Card className="z-20 bg-zinc-900 lg:sticky lg:top-6">
+        <Card className="z-20 !bg-zinc-900 lg:sticky lg:top-6">
           <CardHeader className="p-5 sm:p-6">
             <CardTitle className="text-2xl sm:text-3xl">Ampero FX catalog</CardTitle>
             <CardDescription className="max-w-xl">
@@ -183,7 +201,7 @@ export default function App() {
                   ))}
                 </ul>
               ) : null}
-              <div className="grid gap-3 sm:grid-cols-[minmax(0,1fr)_13rem]">
+              <div className="grid gap-3 sm:grid-cols-[minmax(0,1fr)_13rem_11rem]">
                 <div className="space-y-1">
                   <div className="flex items-center justify-between gap-4 text-xs text-zinc-400">
                     <label htmlFor="catalog-search" className="font-medium">Search</label>
@@ -208,7 +226,7 @@ export default function App() {
                       disabled={isLoading}
                       className="pr-20"
                     />
-                    {query || tags.length > 0 || pedalboard ? (
+                    {query || tags.length > 0 || pedalboard || effectType ? (
                       <Button
                         type="button"
                         variant="ghost"
@@ -218,6 +236,7 @@ export default function App() {
                           setTags([]);
                           setQuery('');
                           setPedalboard('');
+                          setEffectType('');
                         }}
                       >
                         Clear
@@ -242,6 +261,23 @@ export default function App() {
                     ))}
                   </select>
                 </div>
+                <div className="space-y-1">
+                  <label htmlFor="catalog-effect-type" className="block text-xs font-medium text-zinc-400">
+                    Effect type
+                  </label>
+                  <select
+                    id="catalog-effect-type"
+                    value={effectType}
+                    onChange={(event) => setEffectType(event.target.value as ManualCategory | '')}
+                    disabled={isLoading}
+                    className="flex h-10 w-full rounded-xl border border-zinc-800 bg-zinc-950/60 px-3 py-2 text-sm text-zinc-100 outline-none transition-colors focus:border-zinc-600 focus:ring-1 focus:ring-zinc-600/50 disabled:cursor-not-allowed disabled:opacity-50"
+                  >
+                    <option value="">All effect types</option>
+                    {effectTypes.map((type) => (
+                      <option key={type} value={type}>{categoryLabel(type)}</option>
+                    ))}
+                  </select>
+                </div>
               </div>
             </div>
 
@@ -257,7 +293,7 @@ export default function App() {
           ) : error ? (
             <ErrorState error={error} onRetry={() => setReloadCount((count) => count + 1)} />
           ) : visibleItems.length === 0 ? (
-            <EmptyState query={searchTerms.join(' ')} />
+            <EmptyState query={searchTerms.join(' ')} isFiltered={isSearching} />
           ) : (
             <ul className="space-y-3">
               {visibleItems.map((item) => (
