@@ -8,18 +8,23 @@ export function normalizeQuery(query: string): string {
   return query.trim().toLowerCase();
 }
 
-export function filterManualItems<T extends SearchableItem>(items: T[], query: string): T[] {
-  const normalizedQuery = normalizeQuery(query);
+export function queryTerms(query: string): string[] {
+  return normalizeQuery(query).split(/\s+/).filter(Boolean);
+}
 
-  if (!normalizedQuery) {
+function searchableText(item: SearchableItem): string {
+  return [item.title, item.description, ...(item.pedalboards ?? [])].join(' ').toLowerCase();
+}
+
+export function filterManualItems<T extends SearchableItem>(items: T[], query: string | readonly string[]): T[] {
+  const terms = typeof query === 'string' ? queryTerms(query) : query.flatMap(queryTerms);
+
+  if (terms.length === 0) {
     return items.slice();
   }
 
   return items.filter((item) => {
-    return (
-      item.title.toLowerCase().includes(normalizedQuery) ||
-      item.description.toLowerCase().includes(normalizedQuery)
-      || item.pedalboards?.some((pedalboard) => pedalboard.toLowerCase().includes(normalizedQuery))
-    );
+    const haystack = searchableText(item);
+    return terms.every((term) => haystack.includes(term));
   });
 }

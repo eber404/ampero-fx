@@ -5,9 +5,11 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './com
 import { Input } from './components/ui/input';
 import { Skeleton } from './components/ui/skeleton';
 import { categoryBadgeClass, categoryLabel } from './lib/manual/category-ui';
-import { filterManualItems } from './lib/manual/search';
+import { filterManualItems, queryTerms } from './lib/manual/search';
 import { loadHotoneEffects } from './lib/hotone/load';
 import type { HotoneUnifiedEffect } from './lib/hotone/types';
+
+const countFormat = new Intl.NumberFormat('en-US');
 
 function formatLabel(value: string): string {
   return value
@@ -21,18 +23,18 @@ function CatalogSkeleton() {
   return (
     <div className="space-y-3">
       {Array.from({ length: 6 }).map((_, index) => (
-        <Card key={index} className="bg-zinc-900/70">
-          <CardHeader className="gap-3">
-            <div className="flex items-start justify-between gap-3">
+        <Card key={index} className="bg-zinc-900/40">
+          <CardHeader>
+            <div className="flex items-start justify-between gap-4">
               <div className="space-y-2">
-                <Skeleton className="h-4 w-32 rounded-full" />
-                <Skeleton className="h-3 w-60 rounded-full" />
+                <Skeleton className="h-4 w-32" />
+                <Skeleton className="h-3 w-60" />
               </div>
-              <Skeleton className="h-6 w-20 rounded-full" />
+              <Skeleton className="h-5 w-20" />
             </div>
           </CardHeader>
           <CardContent>
-            <Skeleton className="h-3 w-5/6 rounded-full" />
+            <Skeleton className="h-3 w-5/6" />
           </CardContent>
         </Card>
       ))}
@@ -42,12 +44,12 @@ function CatalogSkeleton() {
 
 function EmptyState({ query }: { query: string }) {
   return (
-    <Card className="border-dashed bg-zinc-900/50 shadow-none">
+    <Card className="border-dashed bg-transparent shadow-none">
       <CardHeader className="items-center text-center">
         <CardTitle className="text-base text-zinc-100 sm:text-lg">
           {query ? `No effects match "${query.trim()}".` : 'No effects available.'}
         </CardTitle>
-        <CardDescription>Try a different title or description keyword.</CardDescription>
+        {query ? <CardDescription>Try a shorter search term.</CardDescription> : null}
       </CardHeader>
     </Card>
   );
@@ -55,7 +57,7 @@ function EmptyState({ query }: { query: string }) {
 
 function ErrorState({ error, onRetry }: { error: string; onRetry: () => void }) {
   return (
-    <Card className="border-red-900/50 bg-red-950/30 shadow-none">
+    <Card className="border-red-900/60 bg-red-950/20 shadow-none">
       <CardHeader>
         <CardTitle className="text-red-100">Failed to load the catalog.</CardTitle>
         <CardDescription className="text-red-200/80">{error}</CardDescription>
@@ -71,14 +73,13 @@ function ErrorState({ error, onRetry }: { error: string; onRetry: () => void }) 
 
 function CatalogItem({ item }: { item: HotoneUnifiedEffect }) {
   return (
-    <Card className="bg-zinc-900/70 transition hover:border-zinc-700 hover:bg-zinc-900">
-      <CardHeader className="gap-3">
-        <div className="flex items-start justify-between gap-3">
+    <Card className="bg-zinc-900/40 transition-colors hover:border-zinc-700 hover:bg-zinc-900/60">
+      <CardHeader>
+        <div className="flex items-start justify-between gap-4">
           <div className="min-w-0">
             <CardTitle className="text-base sm:text-lg">{item.title}</CardTitle>
-            <CardDescription className="mt-2 text-sm leading-6 text-zinc-300 sm:text-[15px]">
-              {item.description}
-            </CardDescription>
+            {item.subtype ? <p className="mt-1 text-xs text-zinc-500">{formatLabel(item.subtype)}</p> : null}
+            <CardDescription className="mt-2">{item.description}</CardDescription>
           </div>
           {item.category ? (
             <Badge variant="outline" className={categoryBadgeClass(item.category)}>
@@ -86,14 +87,9 @@ function CatalogItem({ item }: { item: HotoneUnifiedEffect }) {
             </Badge>
           ) : null}
         </div>
-        {item.subtype ? (
-          <p className="text-xs font-medium uppercase tracking-[0.2em] text-zinc-500">
-            {formatLabel(item.subtype)}
-          </p>
-        ) : null}
-        <div className="flex flex-wrap gap-2 pt-1">
+        <div className="flex flex-wrap gap-2">
           {item.pedalboards.map((pedalboard) => (
-            <Badge key={pedalboard} variant="outline" className="border-zinc-700 bg-zinc-900 text-zinc-200">
+            <Badge key={pedalboard} variant="outline" className="border-zinc-800 text-zinc-400">
               {pedalboard}
             </Badge>
           ))}
@@ -106,6 +102,7 @@ function CatalogItem({ item }: { item: HotoneUnifiedEffect }) {
 export default function App() {
   const [items, setItems] = useState<HotoneUnifiedEffect[]>([]);
   const [query, setQuery] = useState('');
+  const [tags, setTags] = useState<string[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [reloadCount, setReloadCount] = useState(0);
@@ -142,61 +139,79 @@ export default function App() {
     };
   }, [reloadCount]);
 
-  const visibleItems = filterManualItems(items, query);
+  const searchTerms = [...tags, ...queryTerms(query)];
+  const visibleItems = filterManualItems(items, searchTerms);
   const totalItems = items.length;
   const visibleCount = visibleItems.length;
+  const isSearching = searchTerms.length > 0;
+
+  const countLabel = isSearching
+    ? `${countFormat.format(visibleCount)} of ${countFormat.format(totalItems)} effects`
+    : `${countFormat.format(totalItems)} effects`;
 
   return (
-    <main className="min-h-screen bg-[radial-gradient(circle_at_top,_rgba(63,63,70,0.35),_transparent_28%),linear-gradient(180deg,_#09090b_0%,_#050506_100%)] text-zinc-100">
-      <div className="mx-auto flex min-h-screen w-full max-w-5xl flex-col gap-6 px-4 py-4 sm:px-6 sm:py-6 lg:px-8 lg:py-8">
-        <Card>
-          <CardHeader>
-            <p className="text-[11px] uppercase tracking-[0.32em] text-zinc-500">Hotone</p>
-            <CardTitle className="text-3xl sm:text-4xl">AMPERO FX catalog</CardTitle>
-            <CardDescription className="max-w-xl text-sm leading-6 sm:text-base">
-              Browse Hotone effects and search across titles, descriptions, and supported pedalboards.
+    <main className="min-h-screen text-zinc-100">
+      <div className="mx-auto flex min-h-screen w-full max-w-5xl flex-col gap-6 px-4 py-6 sm:px-6 sm:py-8 lg:px-8">
+        <Card className="z-20 bg-zinc-900 lg:sticky lg:top-6">
+          <CardHeader className="p-5 sm:p-6">
+            <CardTitle className="text-2xl sm:text-3xl">Ampero FX catalog</CardTitle>
+            <CardDescription className="max-w-xl">
+              Hotone effects and the pedalboards that support them.
             </CardDescription>
           </CardHeader>
 
-          <CardContent className="space-y-4">
+          <CardContent className="space-y-4 px-5 pb-5 sm:px-6 sm:pb-6">
             <div className="space-y-2">
-              <label
-                htmlFor="catalog-search"
-                className="block text-xs font-medium uppercase tracking-[0.2em] text-zinc-500"
-              >
-                Search
-              </label>
+              <div className="flex items-center justify-between gap-4 text-xs text-zinc-400">
+                <label htmlFor="catalog-search" className="font-medium">Search</label>
+                <span id="search-hint">Enter to add tags</span>
+              </div>
+              {tags.length > 0 ? (
+                <ul aria-label="Search tags" className="flex flex-wrap gap-2">
+                  {tags.map((tag) => (
+                    <li key={tag}>
+                      <button
+                        type="button"
+                        aria-label={`Remove tag ${tag}`}
+                        onClick={() => setTags((current) => current.filter((value) => value !== tag))}
+                        className="inline-flex min-h-8 items-center gap-2 rounded-lg border border-zinc-700 bg-zinc-800 px-3 py-1 text-sm text-zinc-100 transition-colors duration-150 ease-out hover:border-zinc-500 hover:bg-zinc-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-900"
+                      >
+                        {tag}
+                        <span aria-hidden="true" className="text-zinc-400">×</span>
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              ) : null}
               <div className="relative">
-                <svg
-                  aria-hidden="true"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  className="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-zinc-500"
-                >
-                  <path
-                    d="M8.5 14a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11Zm3.85-1.65L17 17"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
                 <Input
                   id="catalog-search"
-                  aria-label="Search effects by title, description, or pedalboard"
-                  placeholder="Search title, description, or pedalboard"
+                  aria-describedby="search-hint"
                   value={query}
                   onChange={(event) => setQuery(event.target.value)}
+                  onKeyDown={(event) => {
+                    if (event.nativeEvent.isComposing) return;
+                    if (event.key === 'Enter') {
+                      event.preventDefault();
+                      setTags((current) => [...new Set([...current, ...queryTerms(query)])]);
+                      setQuery('');
+                    } else if (event.key === 'Backspace' && query.length === 0) {
+                      setTags((current) => current.slice(0, -1));
+                    }
+                  }}
                   disabled={isLoading}
-                  className="pr-20 pl-11"
+                  className="pr-20"
                 />
-                {query ? (
+                {query || tags.length > 0 ? (
                   <Button
                     type="button"
                     variant="ghost"
                     size="sm"
-                    className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full px-3"
-                    onClick={() => setQuery('')}
+                    className="absolute right-2 top-1/2 -translate-y-1/2"
+                    onClick={() => {
+                      setTags([]);
+                      setQuery('');
+                    }}
                   >
                     Clear
                   </Button>
@@ -204,14 +219,9 @@ export default function App() {
               </div>
             </div>
 
-            <div className="flex flex-wrap items-center justify-between gap-3 border-t border-zinc-800 pt-4 text-sm text-zinc-400">
-              <p aria-live="polite">
-                {isLoading ? 'Loading catalog...' : `${visibleCount} of ${totalItems} effects visible`}
-              </p>
-              {!isLoading && !error && totalItems > 0 ? (
-                <p className="text-zinc-500">Search matches title, description, and pedalboards.</p>
-              ) : null}
-            </div>
+            <p aria-live="polite" className="border-t border-zinc-800/80 pt-4 text-sm text-zinc-400">
+              {isLoading ? 'Loading catalog...' : countLabel}
+            </p>
           </CardContent>
         </Card>
 
@@ -221,7 +231,7 @@ export default function App() {
           ) : error ? (
             <ErrorState error={error} onRetry={() => setReloadCount((count) => count + 1)} />
           ) : visibleItems.length === 0 ? (
-            <EmptyState query={query} />
+            <EmptyState query={searchTerms.join(' ')} />
           ) : (
             <ul className="space-y-3">
               {visibleItems.map((item) => (

@@ -54,12 +54,13 @@ export async function downloadPdf(url: string, targetPath: string): Promise<void
   }
 }
 
-export async function syncHotoneCatalog(): Promise<{ changed: boolean; count: number }> {
+export async function syncHotoneCatalog(options: { force?: boolean } = {}): Promise<{ changed: boolean; count: number }> {
   const sources = await fetchHotoneManualSources();
   const previousManifest = await readManifest();
   const nextManifest = normalizeManualManifest(sources);
+  const force = options.force ?? process.env.HOTONE_FORCE_SYNC === '1';
 
-  if (!hasManualChanges(previousManifest, nextManifest)) {
+  if (!force && !hasManualChanges(previousManifest, nextManifest)) {
     return { changed: false, count: 0 };
   }
 

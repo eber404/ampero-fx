@@ -2,9 +2,9 @@
   {
     "productId": "1",
     "productName": "Ampero",
-    "manualId": 258,
-    "manualUrl": "https://res.hotoneaudio.com/prod/support/(Ampero)_Online%C2%A0Manual_EN_Firmware%20V1.0_190919.1629179969196.pdf",
-    "updatedAt": "2021-08-17T06:01:15.000Z"
+    "manualId": 257,
+    "manualUrl": "https://res.hotoneaudio.com/prod/support/Ampero_Online%20Manual_EN_Firmware%20V3.0_190513.1629195249695.pdf",
+    "updatedAt": "2021-08-17T10:14:24.000Z"
   },
   {
     "productId": "1-83-72",
@@ -30,9 +30,9 @@
   {
     "productId": "102",
     "productName": "Ampero II",
-    "manualId": 994,
-    "manualUrl": "https://res.hotoneaudio.com/prod/support/Ampero%20II_Online%20Manual_EN_Firmware%20V1.4.0.1785406897851.pdf",
-    "updatedAt": "2026-07-30T10:31:13.000Z"
+    "manualId": 993,
+    "manualUrl": "https://res.hotoneaudio.com/prod/support/Ampero%20II_Effect%20List_EN_Firmware%20V1.4.0.1785406941890.pdf",
+    "updatedAt": "2026-07-30T10:23:55.000Z"
   },
   {
     "productId": "72",
@@ -51,8 +51,8 @@
   {
     "productId": "87",
     "productName": "Ampero II Stomp",
-    "manualId": 988,
-    "manualUrl": "https://res.hotoneaudio.com/prod/support/Ampero%20II%20Stomp_Online%20Manual_EN_Firmware%20V2.5.0.1785405982280.pdf",
+    "manualId": 987,
+    "manualUrl": "https://res.hotoneaudio.com/prod/support/Ampero%20II%20Stomp_Effect%20List_EN_Firmware%20V2.5.0.1785406068293.pdf",
     "updatedAt": "2026-07-30T10:08:08.000Z"
   },
   {

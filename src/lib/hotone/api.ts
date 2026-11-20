@@ -24,6 +24,15 @@ function isCatalogManualRecord(name: string): boolean {
   return /ampero/i.test(name) && /manual|effect list/i.test(name) && !/drum rhythm|midi control|operating guide|switch\+| press\b|control\b|sound clone/i.test(name);
 }
 
+/**
+ * Effect lists are the table-first documents that carry the full model catalog.
+ * User manuals mostly describe the firmware and yield few or no effect rows, so
+ * they rank below an effect list even when they are newer.
+ */
+function sourceKindRank(name: string): number {
+  return /effect list/i.test(name) ? 2 : 1;
+}
+
 function deriveProductName(record: { name?: string; keyword?: string }): string {
   const keywords = parseMaybeJson<string[]>(record.keyword);
   const keyword = keywords?.[0] ? normalizeWhitespace(keywords[0]) : '';
@@ -84,6 +93,7 @@ export async function fetchHotoneManualSources(fetchImpl: typeof fetch = fetch):
   }>>(await manualsResponse.json());
 
   const byProduct = new Map<string, HotoneManualSource>();
+  const rankByProduct = new Map<string, number>();
 
   for (const record of manuals) {
     if (record.language !== undefined && record.language !== 1) continue;
@@ -102,9 +112,17 @@ export async function fetchHotoneManualSources(fetchImpl: typeof fetch = fetch):
       updatedAt: record.updated_at,
     };
 
+    const rank = sourceKindRank(record.name);
     const previous = byProduct.get(next.productId);
-    if (!previous || previous.updatedAt < next.updatedAt || previous.manualId < next.manualId) {
+    const previousRank = rankByProduct.get(next.productId) ?? 0;
+    const isNewer = previous
+      ? previous.updatedAt < next.updatedAt ||
+        (previous.updatedAt === next.updatedAt && previous.manualId < next.manualId)
+      : false;
+
+    if (!previous || rank > previousRank || (rank === previousRank && isNewer)) {
       byProduct.set(next.productId, next);
+      rankByProduct.set(next.productId, rank);
     }
   }
 

@@ -25,6 +25,32 @@ describe('filterManualItems', () => {
     ]);
   });
 
+  it('matches every term of a multi-word query across fields', () => {
+    expect(filterManualItems(items, 'vox cab')).toEqual([
+      { title: 'Voxy 2x12', description: 'Vintage VOX AC30 2x12 cabinet' },
+    ]);
+  });
+
+  it('requires all terms of a multi-word query to match', () => {
+    expect(filterManualItems(items, 'vox fuzz')).toEqual([]);
+  });
+
+  it('requires every active tag to match across searchable fields', () => {
+    expect(filterManualItems(items, ['BLACK', 'stomp'])).toEqual([items[3]]);
+    expect(filterManualItems(items, ['vox', 'fuzz'])).toEqual([]);
+  });
+
+  it('ignores blank tags and returns all items when no tags remain', () => {
+    expect(filterManualItems(items, [' ', '\t'])).toEqual(items);
+    expect(filterManualItems(items, [])).toEqual(items);
+  });
+
+  it('ignores extra whitespace between terms', () => {
+    expect(filterManualItems(items, '  vox   cab  ')).toEqual([
+      { title: 'Voxy 2x12', description: 'Vintage VOX AC30 2x12 cabinet' },
+    ]);
+  });
+
   it('does not mutate the input array', () => {
     const original = items.map((item) => ({ ...item }));
 
